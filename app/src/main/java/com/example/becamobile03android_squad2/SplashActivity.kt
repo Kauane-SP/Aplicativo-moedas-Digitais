@@ -1,10 +1,10 @@
-package com.example.becamobile03android_squad2.view
+package com.example.becamobile03android_squad2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.example.becamobile03android_squad2.R
+import com.example.becamobile03android_squad2.view.MainActivity
 
 class SplashActivity : AppCompatActivity() {
 
