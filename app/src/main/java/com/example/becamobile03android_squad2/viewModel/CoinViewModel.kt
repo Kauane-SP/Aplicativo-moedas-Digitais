@@ -34,8 +34,6 @@ class CoinViewModel : ViewModel() {
                 coinLiveData.postValue(null)
             }
         })
-
     }
-
 }
 
