@@ -1,4 +1,4 @@
-package com.example.becamobile03android_squad2
+package com.example.becamobile03android_squad2.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,9 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.becamobile03android_squad2.*
+import com.example.becamobile03android_squad2.model.Coin
+import com.example.becamobile03android_squad2.viewModel.CoinViewModel
 import kotlinx.android.synthetic.main.layout_tela_inicial.*
 
 
@@ -24,11 +27,16 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setAdapeter(coin: List<Coin>?) {
         moeda.layoutManager = GridLayoutManager(this@MainActivity, 1)
-        moeda.adapter = coin?.let { CoinAdapter(coin, this) }
+        moeda.adapter = coin?.let {
+            CoinAdapter(
+                coin,
+                this
+            )
+        }
     }
 
 
-    fun ClickCoin(coin:Coin){
+    fun ClickCoin(coin: Coin){
         var intent =  Intent(this, DetalhesCoin::class.java)
         intent.putExtra("coin", coin)
         startActivity(intent)

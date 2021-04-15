@@ -1,4 +1,4 @@
-package com.example.becamobile03android_squad2
+package com.example.becamobile03android_squad2.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -13,6 +13,7 @@ class CoinService {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        fun coinRetrofitApi(): CoinApi = retrofit.create(CoinApi::class.java)
+        fun coinRetrofitApi(): CoinApi = retrofit.create(
+            CoinApi::class.java)
     }
 }
