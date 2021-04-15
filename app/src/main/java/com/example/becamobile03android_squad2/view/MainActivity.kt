@@ -20,12 +20,12 @@ class MainActivity : AppCompatActivity() {
         val viewModel: CoinViewModel by viewModels()
         viewModel.init()
         viewModel.listCoin.observe(this, Observer{
-            setAdapeter(it)
+            setAdapter(it)
         }
 
         )
     }
-    private fun setAdapeter(coin: List<Coin>?) {
+    private fun setAdapter(coin: List<Coin>?) {
         moeda.layoutManager = GridLayoutManager(this@MainActivity, 1)
         moeda.adapter = coin?.let {
             CoinAdapter(

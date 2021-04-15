@@ -50,7 +50,7 @@
         tools:text="R$30,010,20" />
 
     <TextView
-        android:id="@+id/asset_id"
+        android:id="@+id/id_coin"
         android:layout_width="46dp"
         android:layout_height="23dp"
         android:gravity="center"
