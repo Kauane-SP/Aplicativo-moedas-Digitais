@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/limegreen"
+    tools:context=".view.DetailsCoin">
+
+    <ImageView
+        android:id="@+id/id_icon"
+        android:layout_width="66dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toTopOf="@+id/price_usd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/limegreen"
+        android:text="ADICIONAR"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <TextView
+        android:id="@+id/price_usd"
+        android:layout_width="176dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/cabin"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805"
+        tools:text="R$30,010,20" />
+
+    <TextView
+        android:id="@+id/asset_id"
+        android:layout_width="46dp"
+        android:layout_height="23dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.367"
+        tools:text="BTC" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="353dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="382dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/vol_traded"
+            android:layout_width="221dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="96dp"
+            android:gravity="center"
+            android:fontFamily="@font/cabin"
+            android:text="volumes negociados"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/last_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/cabin"
+            android:layout_marginStart="20dp"
+            android:text="última hora"
+            android:textSize="20dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/last_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:fontFamily="@font/cabin"
+            android:layout_marginStart="20dp"
+            android:textSize="20dp"
+            android:text="último dia"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/last_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:fontFamily="@font/cabin"
+            android:layout_marginStart="20dp"
+            android:textSize="20dp"
+            android:text="último mês"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/volume_1hrs_usd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="100dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/cabin"
+            android:textSize="20dp"
+            tools:text="$ 24783088.66" />
+
+        <TextView
+            android:id="@+id/volume_1day_usd"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:fontFamily="@font/cabin"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="150dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:text="$ 824089491.25" />
+
+        <TextView
+            android:id="@+id/volume_1mth_usd"
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:fontFamily="@font/cabin"
+            android:layout_marginStart="210dp"
+            android:layout_marginTop="200dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:text="$ 325901552984.55" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
