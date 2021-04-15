@@ -38,8 +38,10 @@ class CoinAdapter(private val list: List<Coin>, private val listener: MainActivi
         var list: MutableList<Coin>,
         var listener: MainActivity
     ) : RecyclerView.ViewHolder(itemView) {
-        private val listTitle: AppCompatTextView = itemView.findViewById(R.id.titulo_coin)
-        private val imagem: AppCompatImageView = itemView.findViewById(R.id.imagem_coin)
+        private val listTitle: AppCompatTextView = itemView.findViewById(R.id.name_coin)
+        private val idName: AppCompatTextView = itemView.findViewById(R.id.id_coin)
+        private val listPrice: AppCompatTextView = itemView.findViewById(R.id.price_usd)
+        private val imgCoin: AppCompatImageView = itemView.findViewById(R.id.imgcoin)
 
         init{
             itemView.setOnClickListener{
@@ -49,9 +51,12 @@ class CoinAdapter(private val list: List<Coin>, private val listener: MainActivi
 
         fun bind(coin: Coin) {
             val imageId = coin.idIcon?.replace("-","")
-            Picasso.get().load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${imageId}.png").into(imagem)
+            Picasso.get().load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${imageId}.png")
+                .into(imgCoin)
             if (coin.name?.isNotEmpty() == true) {
                 listTitle.text = coin.name.toString()
+                idName.text = coin.assetId.toString()
+                listPrice.text = coin.priceUsd.toString()
             }
         }
     }
