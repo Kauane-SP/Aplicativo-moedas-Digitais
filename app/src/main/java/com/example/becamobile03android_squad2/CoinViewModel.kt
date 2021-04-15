@@ -12,7 +12,9 @@ class CoinViewModel : ViewModel() {
     private val coinLiveData: MutableLiveData<List<Coin>> = MutableLiveData()
     val listCoin: LiveData<List<Coin>>
         get() = coinLiveData
-
+    fun init(){
+        callListCoin()
+    }
 
     private fun callListCoin() {
         val call = CoinService.coinRetrofitApi().getAllList("CFB9107C-F454-4F93-B412-C7F15E3D284D")

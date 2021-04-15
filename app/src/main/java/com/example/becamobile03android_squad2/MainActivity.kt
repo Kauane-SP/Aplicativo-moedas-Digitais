@@ -25,5 +25,4 @@ class MainActivity : AppCompatActivity() {
         moeda.layoutManager = GridLayoutManager(this@MainActivity, 1)
         moeda.adapter = coin?.let { CoinAdapter(coin, this) }
     }
-
 }
