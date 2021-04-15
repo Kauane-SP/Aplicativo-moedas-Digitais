@@ -13,7 +13,7 @@
         android:theme="@style/Theme.BECAMOBILE03ANDROIDSQUAD2">
         <activity android:name=".view.MainActivity"></activity>
         <activity android:name=".view.DetailsCoin" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".view.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
