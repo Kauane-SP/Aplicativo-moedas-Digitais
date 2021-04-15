@@ -1,5 +1,6 @@
 package com.example.becamobile03android_squad2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -24,5 +25,11 @@ class MainActivity : AppCompatActivity() {
     private fun setAdapeter(coin: List<Coin>?) {
         moeda.layoutManager = GridLayoutManager(this@MainActivity, 1)
         moeda.adapter = coin?.let { CoinAdapter(coin, this) }
+    }
+
+
+    fun ClickCoin(coin:Coin){
+        var intent =  Intent(this, DetalhesCoin::class.java)
+
     }
 }
