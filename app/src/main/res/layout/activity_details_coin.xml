@@ -11,6 +11,7 @@
         android:id="@+id/id_icon"
         android:layout_width="66dp"
         android:layout_height="55dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintBottom_toTopOf="@+id/price_usd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -34,13 +35,12 @@
 
     <TextView
         android:id="@+id/price_day"
-        android:layout_width="176dp"
-        android:layout_height="53dp"
+        android:layout_width="152dp"
+        android:layout_height="42dp"
         android:fontFamily="@font/cabin"
         android:gravity="center"
-        android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="26dp"
+        android:textSize="32dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -130,37 +130,54 @@
 
         <TextView
             android:id="@+id/volume_1hrs_usd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="250dp"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginStart="260dp"
             android:layout_marginTop="100dp"
             android:textColor="@color/white"
             android:fontFamily="@font/cabin"
             android:textSize="20dp"
-            tools:text="$ 24783088.66" />
+            tools:text="24783088.66" />
 
         <TextView
             android:id="@+id/volume_1day_usd"
-            android:layout_width="160dp"
+            android:layout_width="124dp"
             android:layout_height="30dp"
-            android:fontFamily="@font/cabin"
-            android:layout_marginStart="240dp"
+            android:gravity="center"
+            android:layout_marginStart="260dp"
             android:layout_marginTop="150dp"
+            android:fontFamily="@font/cabin"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:text="$ 824089491.25" />
+            tools:text="24089491.25" />
 
         <TextView
             android:id="@+id/volume_1mth_usd"
-            android:layout_width="190dp"
+            android:layout_width="124dp"
             android:layout_height="30dp"
-            android:fontFamily="@font/cabin"
-            android:layout_marginStart="210dp"
+            android:layout_marginStart="260dp"
             android:layout_marginTop="200dp"
+            android:fontFamily="@font/cabin"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:text="$ 325901552984.55" />
+            tools:text="25901552984.55" />
 
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/cifr"
+        android:layout_width="19dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="$"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_day"
+        app:layout_constraintEnd_toStartOf="@+id/price_day"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/price_day"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

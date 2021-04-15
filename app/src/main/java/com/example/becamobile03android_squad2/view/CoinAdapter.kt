@@ -45,7 +45,7 @@ class CoinAdapter(private val list: List<Coin>, private val listener: MainActivi
 
         init{
             itemView.setOnClickListener{
-                listener.ClickCoin(list[adapterPosition])
+                listener.clickCoin(list[adapterPosition])
             }
         }
 

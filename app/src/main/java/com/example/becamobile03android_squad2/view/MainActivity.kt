@@ -36,8 +36,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun ClickCoin(coin: Coin){
-        var intent =  Intent(this, DetailsCoin::class.java)
+    fun clickCoin(coin: Coin){
+        val intent =  Intent(this, DetailsCoin::class.java)
         intent.putExtra("coin", coin)
         startActivity(intent)
 
