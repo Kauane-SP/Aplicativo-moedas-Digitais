@@ -1,4 +1,4 @@
-package com.example.becamobile03android_squad2
+package com.example.becamobile03android_squad2.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
