@@ -30,10 +30,16 @@ class CoinAdapter(private val list: List<Coin>, private val listener: MainActivi
     class CoinViewHolder(
         itemView: View,
         var list: MutableList<Coin>,
-        var listeners: MainActivity
+        var listener: MainActivity
     ) : RecyclerView.ViewHolder(itemView) {
         private val listTitle: AppCompatTextView = itemView.findViewById(R.id.titulo_coin)
         private val imagem: AppCompatImageView = itemView.findViewById(R.id.imagem_coin)
+
+        init{
+            itemView.setOnClickListener{
+                listener.ClickCoin(list[adapterPosition])
+            }
+        }
 
         fun bind(coin: Coin) {
             val imageId = coin.idIcon?.replace("-","")
