@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.becamobile03android_squad2.R
 import com.example.becamobile03android_squad2.model.Coin
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_details_coin.*
 
 class CoinAdapter(private val list: List<Coin>, private val listener: MainActivity) :
     RecyclerView.Adapter<CoinAdapter.CoinViewHolder>() {
@@ -50,8 +51,10 @@ class CoinAdapter(private val list: List<Coin>, private val listener: MainActivi
         }
 
         fun bind(coin: Coin) {
+
             val imageId = coin.idIcon?.replace("-","")
             Picasso.get().load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${imageId}.png")
+                .placeholder(R.mipmap.ic_launcher_round)
                 .into(imgCoin)
             if (coin.name?.isNotEmpty() == true) {
                 listTitle.text = coin.name.toString()

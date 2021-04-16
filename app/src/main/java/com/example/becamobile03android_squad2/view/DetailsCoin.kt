@@ -25,7 +25,7 @@ class DetailsCoin : AppCompatActivity() {
        setupToolbar(toolbar_back, "Voltar", true)
     }
         private fun getExtra(){
-            if(intent.extras != null){
+            if(intent.extras != null) {
                 val coin = intent.getParcelableExtra("coin") as? Coin
                 itemId = coin?.assetId
                 priceId = coin?.priceUsd
@@ -38,11 +38,18 @@ class DetailsCoin : AppCompatActivity() {
                 volume_1hrs_usd.text = coin?.volumeHour
                 volume_1day_usd.text = coin?.volumeDay
                 volume_1mth_usd.text = coin?.volumeMonth
-                val image = coin?.idIcon?.replace("-","")
-                Picasso.get().load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${image}.png").into(id_icon)
+
+
+                val image = coin?.idIcon?.replace("-", "")
+                Picasso.get()
+                    .load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${image}.png")
+                    .placeholder(R.mipmap.ic_launcher_round)
+                    .into(id_icon)
 
 
             }
+
+
     }
 
     fun setupToolbar(toolbar: androidx.appcompat.widget.Toolbar, title: String, navigationBack: Boolean){
