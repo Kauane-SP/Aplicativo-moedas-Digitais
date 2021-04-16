@@ -3,6 +3,7 @@ package com.example.becamobile03android_squad2.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.SearchView
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
@@ -24,6 +25,13 @@ class MainActivity : AppCompatActivity() {
             setAdapter(it)
         }
         )
+        main_return.setOnClickListener {
+            pageStart(it)
+        }
+
+        main_detalhes.setOnClickListener{
+            pageStart(it)
+        }
 
         val search = findViewById<SearchView>(R.id.searchBar)
 
@@ -43,6 +51,25 @@ class MainActivity : AppCompatActivity() {
         val intent =  Intent(this, DetailsCoin::class.java)
         intent.putExtra("coin", coin)
         startActivity(intent)
+
+    }
+
+    fun pageStert(view: View){
+        val page = view.id
+
+        when {
+            (page == R.id.main_return) ->{
+                val intent = Inten(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+            (page == R.id.main_detalhes) ->{
+                val intentDetails = Inten(this, CoinFavorit::class.java)
+                startActivity(intentDetails)
+
+        }
+
+    }
 
     }
 }
