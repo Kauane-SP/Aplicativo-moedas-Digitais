@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_details_coin.*
 
 class DetailsCoin : AppCompatActivity() {
 
-    private var itemId: String? = ""
+    private var iconId: String? = ""
     private var priceId: String? = ""
     private var hourId: String? = ""
     private var dayId: String? = ""
@@ -27,13 +27,13 @@ class DetailsCoin : AppCompatActivity() {
         private fun getExtra(){
             if(intent.extras != null) {
                 val coin = intent.getParcelableExtra("coin") as? Coin
-                itemId = coin?.assetId
+                iconId = coin?.assetId
                 priceId = coin?.priceUsd
                 hourId = coin?.volumeHour
                 dayId = coin?.volumeDay
                 monthId = coin?.volumeMonth
 
-
+                id_coin.text = coin?.assetId
                 price_day.text = coin?.priceUsd
                 volume_1hrs_usd.text = coin?.volumeHour
                 volume_1day_usd.text = coin?.volumeDay
@@ -45,11 +45,7 @@ class DetailsCoin : AppCompatActivity() {
                     .load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${image}.png")
                     .placeholder(R.mipmap.ic_launcher_round)
                     .into(id_icon)
-
-
             }
-
-
     }
 
     fun setupToolbar(toolbar: androidx.appcompat.widget.Toolbar, title: String, navigationBack: Boolean){
@@ -67,5 +63,4 @@ class DetailsCoin : AppCompatActivity() {
         }
       return super.onOptionsItemSelected(item)
     }
-
 }

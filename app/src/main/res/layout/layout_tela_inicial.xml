@@ -9,24 +9,18 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/moeda"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="410dp"
+        android:layout_height="577dp"
+        android:layout_marginTop="170dp"
+        android:background="@color/darkgray"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="56dp"
-        android:layout_marginEnd="25dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/item_coin"
-        android:background="@color/darkgray"
-        />
+        tools:listitem="@layout/item_coin" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -35,29 +29,17 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:weightSum="1"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
 
     <com.google.android.material.circularreveal.CircularRevealFrameLayout
         android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="?attr/actionBarSize" >
+        android:layout_width="410dp"
+        android:layout_height="513dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="162dp">
 
-        <TextView
-            android:id="@+id/app_name"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_row="0"
-            android:padding="35dp"
-            android:layout_column="1"
-            android:background="@color/black"
-            android:fontFamily="@font/cabin"
-            android:gravity="center|top"
-            android:text="@string/title_digital_coin"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
 
     </com.google.android.material.circularreveal.CircularRevealFrameLayout>
 
@@ -73,5 +55,35 @@
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:menu="@menu/bottom_menu" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="410dp"
+        android:layout_height="163dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@color/black"
+        android:fontFamily="@font/cabin"
+        android:gravity="center|top"
+        android:padding="35dp"
+        android:text="@string/title_digital_coin"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/searchBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SearchView
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/search_bar"
+        android:backgroundTint="@color/darkgray"
+        android:contextClickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/moeda"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.92"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
