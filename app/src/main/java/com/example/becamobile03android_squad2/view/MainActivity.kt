@@ -3,6 +3,7 @@ package com.example.becamobile03android_squad2.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.SearchView
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
@@ -22,8 +23,10 @@ class MainActivity : AppCompatActivity() {
         viewModel.listCoin.observe(this, Observer{
             setAdapter(it)
         }
-
         )
+
+        val search = findViewById<SearchView>(R.id.searchBar)
+
     }
     private fun setAdapter(coin: List<Coin>?) {
         moeda.layoutManager = GridLayoutManager(this@MainActivity, 1)
