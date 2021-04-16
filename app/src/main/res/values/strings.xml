@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">BECA MOBILE 03 ANDROID - SQUAD 2</string>
     <string name="title_splash">Moeda Digital</string>
+    <string name="title_digital_coin">Moeda Digital</string>
+    <string name="coins">Moedas</string>
+    <string name="favorites">Favoritos</string>
 </resources>
