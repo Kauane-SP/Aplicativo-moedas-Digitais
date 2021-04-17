@@ -4,4 +4,5 @@
     <string name="title_digital_coin">Moeda Digital</string>
     <string name="coins">Moedas</string>
     <string name="favorites">Favoritos</string>
+    <string name="value_modey_coin">$</string>
 </resources>

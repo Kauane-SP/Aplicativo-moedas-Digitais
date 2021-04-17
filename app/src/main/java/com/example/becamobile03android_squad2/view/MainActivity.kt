@@ -25,13 +25,13 @@ class MainActivity : AppCompatActivity() {
             setAdapter(it)
         }
         )
-        main_return.setOnClickListener {
-            pageStart(it)
-        }
+     //   main_return.setOnClickListener {
+       //     pageStart(it)
+        //}
 
-        main_detalhes.setOnClickListener{
-            pageStart(it)
-        }
+        //main_detalhes.setOnClickListener{
+          //  pageStart(it)
+        //}
 
         val search = findViewById<SearchView>(R.id.searchBar)
 
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun pageStert(view: View){
+   /* fun pageStert(view: View){
         val page = view.id
 
         when {
@@ -71,5 +71,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    }
+    }*/
 }
