@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.becamobile03android_squad2.*
 import com.example.becamobile03android_squad2.model.Coin
 import com.example.becamobile03android_squad2.viewModel.CoinViewModel
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_tela_inicial.*
 
 
