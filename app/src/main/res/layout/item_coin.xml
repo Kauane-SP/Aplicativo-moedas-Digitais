@@ -1,39 +1,36 @@
 <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardImagem"
+    android:id="@+id/card_item_list_coin"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="388dp"
-    android:layout_height="80dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="10dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/item_coin"
-        android:layout_width="388dp"
-        android:layout_height="80dp"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/darkgray">
-
 
         <ImageView
             android:id="@+id/imgcoin"
-            android:layout_width="64dp"
-            android:layout_height="57dp"
-            android:layout_marginEnd="12dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/name_coin"
-            app:layout_constraintHorizontal_bias="0.695"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.521" />
 
         <TextView
             android:id="@+id/name_coin"
-            android:layout_width="176dp"
+            android:layout_width="186dp"
             android:layout_height="26dp"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/cabin"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.415"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,11 +40,12 @@
         <TextView
             android:id="@+id/id_coin"
             android:layout_width="38dp"
-            android:layout_height="32dp"
+            android:layout_height="20dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/cabin"
             android:textColor="@color/white"
-            android:textSize="16dp"
+            android:textSize="14dp"
+            tools:text="11"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.251"
@@ -58,22 +56,24 @@
         <TextView
             android:id="@+id/price_usd"
             android:layout_width="83dp"
-            android:layout_height="26dp"
-            android:layout_marginEnd="8dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="16dp"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
+            tools:text="656565656"
             app:layout_constraintStart_toEndOf="@+id/name_coin"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
             android:id="@+id/money"
             android:layout_width="14dp"
             android:layout_height="21dp"
-            android:text="$"
+            android:text="@string/value_modey_coin"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@+id/price_usd"
