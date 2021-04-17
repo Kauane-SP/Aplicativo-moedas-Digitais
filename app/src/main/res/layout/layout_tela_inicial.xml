@@ -1,47 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".view.MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_recycler_coin"
-        android:layout_width="410dp"
-        android:layout_height="577dp"
-        android:layout_marginTop="170dp"
-        android:background="@color/darkgray"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/item_coin" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <TextView
+        android:id="@+id/data_coin_main"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="1"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:text="00/00/00"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    </LinearLayout>
+    <SearchView
+        android:id="@+id/searchBar"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar"
+        android:backgroundTint="@color/darkgray"
+        android:contextClickable="true"
+        app:layout_constraintTop_toBottomOf="@+id/data_coin_main"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-    <com.google.android.material.circularreveal.CircularRevealFrameLayout
-        android:id="@+id/container"
-        android:layout_width="410dp"
-        android:layout_height="513dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="162dp">
-
-
-    </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_recycler_coin_tela_inicial"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/searchBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_coin"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/app_bar_inf"
@@ -55,35 +54,5 @@
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:menu="@menu/bottom_menu" />
-
-    <TextView
-        android:id="@+id/app_name"
-        android:layout_width="410dp"
-        android:layout_height="163dp"
-        android:layout_row="0"
-        android:layout_column="1"
-        android:background="@color/black"
-        android:fontFamily="@font/cabin"
-        android:gravity="center|top"
-        android:padding="35dp"
-        android:text="@string/title_digital_coin"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/searchBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <SearchView
-        android:id="@+id/searchBar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/search_bar"
-        android:backgroundTint="@color/darkgray"
-        android:contextClickable="true"
-        app:layout_constraintBottom_toTopOf="@+id/list_recycler_coin"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.92"
-        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
