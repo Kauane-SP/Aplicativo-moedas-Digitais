@@ -16,7 +16,6 @@ class DetailsCoin : AppCompatActivity() {
     private var dayId: String? = ""
     private var monthId: String? = ""
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details_coin)

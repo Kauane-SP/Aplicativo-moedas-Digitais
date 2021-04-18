@@ -29,15 +29,6 @@ class MainActivity : AppCompatActivity() {
             setAdapter(it)
         }
         )
-     //   main_return.setOnClickListener {
-       //     pageStart(it)
-        //}
-
-        //main_detalhes.setOnClickListener{
-          //  pageStart(it)
-        //}
-
-        val search = findViewById<SearchView>(R.id.searchBar)
 
         val date: TextView = findViewById(R.id.data_coin_top_bar)
         date.text = coinData.callDate()
@@ -62,23 +53,4 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
 
     }
-
-   /* fun pageStert(view: View){
-        val page = view.id
-
-        when {
-            (page == R.id.main_return) ->{
-                val intent = Inten(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-            (page == R.id.main_detalhes) ->{
-                val intentDetails = Inten(this, CoinFavorit::class.java)
-                startActivity(intentDetails)
-
-        }
-
-    }
-
-    }*/
 }

@@ -13,5 +13,4 @@ class CoinData {
         val style = DateTimeFormatter.ofPattern("dd MMM yyyy")
         return data.format(style).toString()
     }
-
 }

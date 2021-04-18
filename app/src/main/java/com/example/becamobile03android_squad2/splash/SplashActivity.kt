@@ -9,7 +9,6 @@ import com.example.becamobile03android_squad2.view.MainActivity
 
 class SplashActivity : AppCompatActivity() {
 
-
     lateinit var handler: Handler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +20,5 @@ class SplashActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }, 3000)
-
-
     }
 }
