@@ -25,7 +25,6 @@ class CoinAdapter(private val list: List<Coin>, private val listener: MainActivi
         )
     }
 
-
     override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
         holder.bind(list[position])
     }
