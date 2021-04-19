@@ -31,16 +31,17 @@ class FavoriteAdapter (
             val coin: Coin = Coin(
                 list[position].assetId,
                 list[position].name,
+                list[position].typeCrypto,
                 list[position].volumeHour,
                 list[position].volumeDay,
                 list[position].volumeMonth,
                 list[position].priceUsd,
                 list[position].idIcon,
-                list[position].favorite.toString()
+                list[position].iconImage,
+                list[position].favorite
             )
-            if (coin != null) {
-                listCoin.add(coin)
-            }
+
+            listCoin.add(coin)
             return listCoin
         }
 
@@ -84,9 +85,9 @@ class FavoriteAdapter (
             value?.text = list[0].priceUsd
             value?.contentDescription = "Valor da moeda ${list[0].priceUsd}"
 
-            Picasso.get().load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${imageId}.png")
-                .placeholder(R.mipmap.ic_launcher)
-                .into(image)
+          Picasso.get().load("${list[0].iconImage}.png")
+               .placeholder(R.mipmap.ic_launcher)
+              .into(image)
 
             return convertView
         }

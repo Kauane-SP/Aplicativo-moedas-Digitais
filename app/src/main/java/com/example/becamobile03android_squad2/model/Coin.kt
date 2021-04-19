@@ -14,7 +14,6 @@ data class Coin(
     @SerializedName("volume_1mth_usd") var volumeMonth: String?,
     @SerializedName("id_icon") var idIcon: String?,
     @SerializedName("price_usd") var priceUsd: String?,
-    
-    var favorite: Boolean
-
-): Parcelable
+    var favorite: Boolean,
+    val iconImage: Boolean
+): Parcelable 

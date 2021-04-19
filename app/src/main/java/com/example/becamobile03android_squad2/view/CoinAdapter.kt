@@ -38,7 +38,7 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
         private val idName: AppCompatTextView = itemView.findViewById(R.id.id_coin)
         private val listPrice: AppCompatTextView = itemView.findViewById(R.id.price_usd)
         private val imgCoin: AppCompatImageView = itemView.findViewById(R.id.imgcoin)
-        private var sharedPreferences = SharedPreference(this)
+        private var sharedPreferences = SharedPreference(context = DetailsCoin())
         private val starFavorite: AppCompatImageView = itemView.findViewById(R.id.favorite_star)
 
 

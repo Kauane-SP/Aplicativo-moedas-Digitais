@@ -36,7 +36,7 @@ open class CoinViewModel : ViewModel() { val listCoinResult: MutableList<Coin> =
 
     fun getCoins() {
         viewModelScope.launch(Dispatchers.IO) {
-            listCoin.postValue(listCoin.callListCoin())
+            listCoin.postValue(listCoin.value)
         }
     }
 

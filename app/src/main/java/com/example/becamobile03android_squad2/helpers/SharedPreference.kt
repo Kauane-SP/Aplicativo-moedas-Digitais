@@ -1,9 +1,9 @@
 package com.example.becamobile03android_squad2.helpers
 
 import android.content.Context
-import com.example.becamobile03android_squad2.view.CoinAdapter
+import com.example.becamobile03android_squad2.view.DetailsCoin
 
-class SharedPreference(context: CoinAdapter.CoinViewHolder){
+class SharedPreference(context: DetailsCoin){
 
     private val myPreferences = context.getSharedPreferences("FAVORITE", Context.MODE_PRIVATE)
 
