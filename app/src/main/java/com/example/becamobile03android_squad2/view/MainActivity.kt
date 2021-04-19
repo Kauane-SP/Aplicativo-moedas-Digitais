@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.init()
         viewModel.listCoin.observe(this, Observer{
             setAdapter(it)
+            searchListDisplay(it)
         }
         )
 
@@ -51,6 +52,36 @@ class MainActivity : AppCompatActivity() {
         val intent =  Intent(this, DetailsCoin::class.java)
         intent.putExtra("coin", coin)
         startActivity(intent)
+    }
+
+
+    private fun resultListSearch( search: String, list: List<Coin>){
+        var lisResultSearch :MutableList<Coin> = arrayListOf()
+        for(element in list){
+            if(element.name != null ){
+                if(element.name!!.contains(search,ignoreCase = true)){
+                    lisResultSearch.add(element)
+                }
+            }
+        }
+        setAdapter(lisResultSearch)
+    }
+
+
+    private fun searchListDisplay(list: List<Coin>) {
+        searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                resultListSearch(query, list)
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                resultListSearch(newText, list)
+                return false
+            }
+        })
 
     }
+
+
 }
