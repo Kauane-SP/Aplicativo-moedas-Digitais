@@ -1,4 +1,4 @@
-package com.example.becamobile03android_squad2
+package com.example.becamobile03android_squad2.helpers
 
 import android.os.Build
 import androidx.annotation.RequiresApi
