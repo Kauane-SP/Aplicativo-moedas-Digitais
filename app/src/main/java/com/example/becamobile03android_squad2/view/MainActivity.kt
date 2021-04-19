@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .add(R.id.container, MainFragment())
                 .commitNow()
-        }
+       }
 
 
         val date: TextView = findViewById(R.id.data_coin_top_bar)
@@ -32,10 +32,4 @@ class MainActivity : AppCompatActivity() {
         date.contentDescription = coinData.callDate()
     }
 
-
-    fun clickCoin(coin: Coin){
-        val intent =  Intent(this, DetailsCoin::class.java)
-        intent.putExtra("coin", coin)
-        startActivity(intent)
-    }
 }

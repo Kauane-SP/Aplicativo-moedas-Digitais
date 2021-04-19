@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.becamobile03android_squad2.model.Coin
 import com.example.becamobile03android_squad2.view.CoinAdapter
-import com.example.becamobile03android_squad2.view.MainActivity
 import com.example.becamobile03android_squad2.viewModel.CoinViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -32,10 +31,8 @@ class MainFragment : Fragment() {
         mainActivityViewModel.observeCoins(this) { handleCoins(it) }
     }
 
-    private fun handleCoins(coin: List<Coin>?) {
+    private fun handleCoins(coin: List<Coin>) {
         list_recycler_coin?.layoutManager = LinearLayoutManager(context)
-        list_recycler_coin?.adapter = context?.let {
-            coin?.let { it1 -> CoinAdapter(it1, it as MainActivity) }
+        list_recycler_coin?.adapter = context?.let { CoinAdapter(coin, it) }
         }
     }
-}
