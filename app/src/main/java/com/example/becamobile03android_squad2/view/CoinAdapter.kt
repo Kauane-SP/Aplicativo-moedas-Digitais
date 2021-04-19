@@ -1,6 +1,5 @@
 package com.example.becamobile03android_squad2.view
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,14 +11,14 @@ import com.example.becamobile03android_squad2.helpers.SharedPreference
 import com.example.becamobile03android_squad2.model.Coin
 import com.squareup.picasso.Picasso
 
-class CoinAdapter(private var list: List<Coin>, private var listener: MainActivity,private var context:Context) :
+class CoinAdapter(private var list: List<Coin>, private var listener: MainActivity) :
     RecyclerView.Adapter<CoinAdapter.CoinViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_coin, parent, false)
 
-        return CoinViewHolder(view, list, listener, context)
+        return CoinViewHolder(view, list, listener)
     }
 
     override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
@@ -33,8 +32,7 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
     class CoinViewHolder(
         itemView: View,
         list: List<Coin>,
-        listener: MainActivity,
-        context: Context
+        listener: MainActivity
     ) : RecyclerView.ViewHolder(itemView) {
         private val listTitle: AppCompatTextView = itemView.findViewById(R.id.name_coin)
         private val idName: AppCompatTextView = itemView.findViewById(R.id.id_coin)
