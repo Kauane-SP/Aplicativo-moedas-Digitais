@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
         val intent =  Intent(this, DetailsCoin::class.java)
         intent.putExtra("coin", coin)
         startActivity(intent)
-
     }
+
+
+
 }
