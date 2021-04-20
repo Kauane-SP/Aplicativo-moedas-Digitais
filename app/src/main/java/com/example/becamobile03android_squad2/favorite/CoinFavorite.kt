@@ -14,9 +14,8 @@ import com.example.becamobile03android_squad2.view.DetailsCoin
 import com.example.becamobile03android_squad2.view.MainActivity
 import com.example.becamobile03android_squad2.viewModel.CoinViewModel
 import kotlinx.android.synthetic.main.activity_coin_favorite.*
-import kotlinx.android.synthetic.main.nav_bar.*
 
-class CoinFavorite : AppCompatActivity(), View.OnClickListener {
+class CoinFavorite : AppCompatActivity(){
 
     private lateinit var sharedPreference: SharedPreference
 
@@ -31,7 +30,10 @@ class CoinFavorite : AppCompatActivity(), View.OnClickListener {
             setAdapter(createListFavorite(it))
         }
         )
-        button_main.setOnClickListener(this)
+        button_main.setOnClickListener{
+            onClick(it)
+
+        }
 
     }
         private fun setAdapter(coin: List<Coin>?) {
@@ -58,7 +60,7 @@ class CoinFavorite : AppCompatActivity(), View.OnClickListener {
                 }
                 return listCoinFavorite
             }
-    override fun onClick(v: View) {
+    fun onClick(v: View) {
         val id = v.id
         val intent = Intent(this, MainActivity::class.java)
         if (id == R.id.button_main) {

@@ -1,10 +1,6 @@
 package com.example.becamobile03android_squad2.helpers
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 class CoinDate {

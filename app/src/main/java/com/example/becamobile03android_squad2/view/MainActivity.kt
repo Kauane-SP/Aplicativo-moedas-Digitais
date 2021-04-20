@@ -17,8 +17,6 @@ import com.example.becamobile03android_squad2.helpers.CoinDate
 import com.example.becamobile03android_squad2.model.Coin
 import com.example.becamobile03android_squad2.viewModel.CoinViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.nav_bar.*
-
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
    private val coinData = CoinDate()
@@ -40,8 +38,10 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         date.text = coinData.callDate()
         date.contentDescription = coinData.callDate()
 
-        button_main.setOnClickListener(this)
-        button_star.setOnClickListener(this)
+        button_main.setOnClickListener {
+            onClick(it)
+        }
+        button_star.setOnClickListener { onClick(it) }
     }
     private fun setAdapter(coin: List<Coin>?) {
         list_recycler_coin.layoutManager = GridLayoutManager(this@MainActivity, 1)
