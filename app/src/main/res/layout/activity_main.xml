@@ -13,7 +13,7 @@
         android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Moeda Digital"
+        android:text="@string/title_digital_coin"
         android:gravity="center"
         android:textColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"

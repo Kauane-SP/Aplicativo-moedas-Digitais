@@ -1,10 +1,26 @@
+<!--<resources>-->
+<!--    <string name="app_name">BECA MOBILE 03 ANDROID - SQUAD 2</string>-->
+<!--    <string name="title_splash">Moeda Digital</string>-->
+<!--    <string name="title_digital_coin">Moeda Digital</string>-->
+<!--    <string name="coins">Moedas</string>-->
+<!--    <string name="favorites">Favoritos</string>-->
+<!--    <string name="value_modey_coin">$</string>-->
+<!--    <string name="search_bar">Search</string>-->
+<!--    <string name="coin_value_zero">$ 000.000.00</string>-->
+<!--</resources>-->
+
 <resources>
     <string name="app_name">BECA MOBILE 03 ANDROID - SQUAD 2</string>
-    <string name="title_splash">Moeda Digital</string>
     <string name="title_digital_coin">Moeda Digital</string>
     <string name="coins">Moedas</string>
     <string name="favorites">Favoritos</string>
-    <string name="value_modey_coin">$</string>
     <string name="search_bar">Search</string>
     <string name="coin_value_zero">$ 000.000.00</string>
+    <string name="add_favorites">Adicionar</string>
+    <string name="volume">Volumes negociados</string>
+    <string name="last_hour">Última hora</string>
+    <string name="last_day">Último dia</string>
+    <string name="last_month">Último mês</string>
+    <string name="dollar_sign">$</string>
+    <string name="back_button">Voltar</string>
 </resources>
