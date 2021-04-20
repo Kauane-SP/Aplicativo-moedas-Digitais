@@ -1,4 +1,4 @@
-package com.example.becamobile03android_squad2.view
+package com.example.becamobile03android_squad2.favorite
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,39 +10,45 @@ import com.example.becamobile03android_squad2.R
 import com.example.becamobile03android_squad2.model.Coin
 import com.squareup.picasso.Picasso
 
-class CoinAdapter(private var list: List<Coin>, private var listener: MainActivity) :
-    RecyclerView.Adapter<CoinAdapter.CoinViewHolder>() {
+class FavoriteAdapter (
+    private var list: List<Coin>,
+    private var listener: CoinFavorite
+    ) : RecyclerView.Adapter<FavoriteAdapter.CoinViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_coin, parent, false)
+            .inflate(R.layout.item_favorit_coin, parent, false)
 
-        return CoinViewHolder(view, list as MutableList<Coin>, listener)
+        return CoinViewHolder(
+            view,
+            list as MutableList<Coin>,
+            listener
+        )
     }
 
     override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
         holder.bind(list[position])
     }
 
-    override fun getItemCount(): Int {
-        return list.size
-    }
+        override fun getItemCount(): Int {
+            return list.size
+        }
 
     class CoinViewHolder(
         itemView: View,
-        list: List<Coin>,
-        listener: MainActivity
+        var list: MutableList<Coin>,
+        var listener: CoinFavorite
     ) : RecyclerView.ViewHolder(itemView) {
-        private val listTitle: AppCompatTextView = itemView.findViewById(R.id.name_coin)
-        private val idName: AppCompatTextView = itemView.findViewById(R.id.id_coin)
-        private val listPrice: AppCompatTextView = itemView.findViewById(R.id.price_usd)
-        private val imgCoin: AppCompatImageView = itemView.findViewById(R.id.imgcoin)
-        private val starFavorite: AppCompatImageView = itemView.findViewById(R.id.favorite_star)
+        private val listTitle: AppCompatTextView = itemView.findViewById(R.id.coin_name_favorit)
+        private val idName: AppCompatTextView = itemView.findViewById(R.id.coin_sub_name_favorit)
+        private val listPrice: AppCompatTextView = itemView.findViewById(R.id.coin_value_favorit)
+        private val imgCoin: AppCompatImageView = itemView.findViewById(R.id.coin_icon_favorit)
 
         init {
-           itemView.setOnClickListener {
+            itemView.setOnClickListener {
                 listener.clickCoin(list[adapterPosition])
-           }
-       }
+            }
+        }
 
         fun bind(coin: Coin) {
 
@@ -56,11 +62,6 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
                 idName.text = coin.assetId.toString()
                 listPrice.text = coin.priceUsd.toString()
             }
-               // if (coin.assetId?.let { sharedPreferences.getBoolean(it) } == true) {
-               //     starFavorite.visibility = View.VISIBLE
-               // } else if (!coin.assetId?.let { sharedPreferences.getBoolean(it) }!!) {
-              //      starFavorite.visibility = View.GONE
-             //   }
-            }
         }
+    }
 }
