@@ -3,6 +3,7 @@ package com.example.becamobile03android_squad2.favorite
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
@@ -10,10 +11,12 @@ import com.example.becamobile03android_squad2.R
 import com.example.becamobile03android_squad2.helpers.SharedPreference
 import com.example.becamobile03android_squad2.model.Coin
 import com.example.becamobile03android_squad2.view.DetailsCoin
+import com.example.becamobile03android_squad2.view.MainActivity
 import com.example.becamobile03android_squad2.viewModel.CoinViewModel
 import kotlinx.android.synthetic.main.activity_coin_favorite.*
+import kotlinx.android.synthetic.main.nav_bar.*
 
-class CoinFavorite : AppCompatActivity() {
+class CoinFavorite : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var sharedPreference: SharedPreference
 
@@ -28,6 +31,8 @@ class CoinFavorite : AppCompatActivity() {
             setAdapter(createListFavorite(it))
         }
         )
+        button_main.setOnClickListener(this)
+
     }
         private fun setAdapter(coin: List<Coin>?) {
             list_recycler_favorite.layoutManager = GridLayoutManager(this@CoinFavorite, 2)
@@ -53,6 +58,14 @@ class CoinFavorite : AppCompatActivity() {
                 }
                 return listCoinFavorite
             }
+    override fun onClick(v: View) {
+        val id = v.id
+        val intent = Intent(this, MainActivity::class.java)
+        if (id == R.id.button_main) {
+            startActivity(intent)
+            finish()
+        }
+    }
         }
 
 

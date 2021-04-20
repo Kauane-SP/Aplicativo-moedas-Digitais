@@ -59,17 +59,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_coin"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/app_bar_inf"
-        android:layout_width="match_parent"
-        android:layout_gravity="bottom"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/black"
+    <include
+        android:id="@+id/nav_bar"
+        layout="@layout/nav_bar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:itemBackground="@color/black"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/bottom_menu" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

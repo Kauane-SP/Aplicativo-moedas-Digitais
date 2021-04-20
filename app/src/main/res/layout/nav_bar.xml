@@ -47,7 +47,7 @@
             android:contentDescription="@string/botao_moedas_favoritas"
             android:orientation="vertical">
 
-            <Button
+            <ImageButton
                 android:id="@+id/button_star"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
