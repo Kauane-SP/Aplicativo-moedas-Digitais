@@ -31,10 +31,13 @@ class MainActivity : AppCompatActivity() {
         viewModel.listCoin.observe(this, Observer{
             setAdapter(it)
             searchListDisplay(it)
+<<<<<<< HEAD
 
            // button_star.setOnClickListener {
            //     clickButton(it)
             //}
+=======
+>>>>>>> develop
         }
         )
 
@@ -61,6 +64,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+<<<<<<< HEAD
+=======
 
     private fun resultListSearch( search: String, list: List<Coin>){
         var lisResultSearch :MutableList<Coin> = arrayListOf()
@@ -74,6 +79,34 @@ class MainActivity : AppCompatActivity() {
         setAdapter(lisResultSearch)
     }
 
+
+    private fun searchListDisplay(list: List<Coin>) {
+        searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                resultListSearch(query, list)
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                resultListSearch(newText, list)
+                return false
+            }
+        })
+>>>>>>> develop
+
+    private fun resultListSearch( search: String, list: List<Coin>){
+        var lisResultSearch :MutableList<Coin> = arrayListOf()
+        for(element in list){
+            if(element.name != null ){
+                if(element.name!!.contains(search,ignoreCase = true)){
+                    lisResultSearch.add(element)
+                }
+            }
+        }
+        setAdapter(lisResultSearch)
+    }
+
+<<<<<<< HEAD
     private fun searchListDisplay(list: List<Coin>) {
         searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
@@ -95,4 +128,7 @@ class MainActivity : AppCompatActivity() {
      //     startActivity(intent)
      // }
   //}
+=======
+
+>>>>>>> develop
 }
