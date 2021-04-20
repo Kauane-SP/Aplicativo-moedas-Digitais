@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         date.text = coinData.callDate()
         date.contentDescription = coinData.callDate()
 
-
+val luana = "Luana"
     }
     private fun setAdapter(coin: List<Coin>?) {
         list_recycler_coin.layoutManager = GridLayoutManager(this@MainActivity, 1)
