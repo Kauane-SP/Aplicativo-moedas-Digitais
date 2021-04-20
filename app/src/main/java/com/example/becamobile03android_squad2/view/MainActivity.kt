@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.nav_bar.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),View.OnClickListener {
    private val coinData = CoinDate()
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -33,9 +33,6 @@ class MainActivity : AppCompatActivity() {
             setAdapter(it)
             searchListDisplay(it)
 
-           // button_star.setOnClickListener {
-           //     clickButton(it)
-            //}
         }
         )
 
@@ -43,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         date.text = coinData.callDate()
         date.contentDescription = coinData.callDate()
 
-val luana = "Luana"
+        button_main.setOnClickListener(this)
+        button_star.setOnClickListener(this)
     }
     private fun setAdapter(coin: List<Coin>?) {
         list_recycler_coin.layoutManager = GridLayoutManager(this@MainActivity, 1)
@@ -88,7 +86,22 @@ val luana = "Luana"
             }
         })
     }
+    override fun onClick(v: View) {
+        val id = v.id
 
+        when{
+            (id == R.id.button_main) -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+            (id == R.id.button_star) -> {
+                val intentFavorite = Intent(this, CoinFavorite::class.java)
+                startActivity(intentFavorite)
+            }
+        }
+    }
  // private fun clickButton(view: View){
      // val page = button_star.id
      // if(page == view.id){
