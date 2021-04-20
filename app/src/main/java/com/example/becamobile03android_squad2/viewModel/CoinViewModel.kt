@@ -1,10 +1,9 @@
 package com.example.becamobile03android_squad2.viewModel
 
-import androidx.lifecycle.*
-import com.example.becamobile03android_squad2.model.Coin
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.becamobile03android_squad2.api.CoinService
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.example.becamobile03android_squad2.model.Coin
 import retrofit2.Call
 import retrofit2.Response
 
@@ -33,16 +32,5 @@ open class CoinViewModel : ViewModel() { val listCoinResult: MutableList<Coin> =
             }
         })
     }
-
-    fun getCoins() {
-        viewModelScope.launch(Dispatchers.IO) {
-            listCoin.postValue(listCoin.value)
-        }
-    }
-
-    fun observeCoins(
-            lifecycleOwner: LifecycleOwner,
-            action: (List<Coin>) -> Unit
-    ) = listCoin.observe(lifecycleOwner) { action(it) }
 }
 

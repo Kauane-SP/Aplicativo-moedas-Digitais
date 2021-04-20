@@ -2,15 +2,16 @@ package com.example.becamobile03android_squad2.helpers
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import java.util.*
 
-class CoinData {
+class CoinDate {
 
-    @RequiresApi(Build.VERSION_CODES.O)
     fun callDate() : String{
-        val data =  LocalDateTime.now()
-        val style = DateTimeFormatter.ofPattern("dd MMM yyyy")
-        return data.format(style).toString()
+        val date = Calendar.getInstance().time
+        var dateTimeFormat = SimpleDateFormat("d MMM yyyy")
+        return dateTimeFormat.format(date)
     }
 }
