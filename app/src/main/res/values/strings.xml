@@ -1,13 +1,3 @@
-<!--<resources>-->
-<!--    <string name="app_name">BECA MOBILE 03 ANDROID - SQUAD 2</string>-->
-<!--    <string name="title_splash">Moeda Digital</string>-->
-<!--    <string name="title_digital_coin">Moeda Digital</string>-->
-<!--    <string name="coins">Moedas</string>-->
-<!--    <string name="favorites">Favoritos</string>-->
-<!--    <string name="value_modey_coin">$</string>-->
-<!--    <string name="search_bar">Search</string>-->
-<!--    <string name="coin_value_zero">$ 000.000.00</string>-->
-<!--</resources>-->
 
 <resources>
     <string name="app_name">BECA MOBILE 03 ANDROID - SQUAD 2</string>
@@ -16,16 +6,13 @@
     <string name="favorites">Favoritos</string>
     <string name="search_bar">Search</string>
     <string name="coin_value_zero">$ 000.000.00</string>
-<<<<<<< HEAD
     <string name="btn_delete">REMOVER</string>
     <string name="btn_include">ADICIONAR</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="botao_lista_de_moedas">Botão para listar moedas</string>
     <string name="button_coins">Moedas</string>
     <string name="botao_moedas_favoritas">Botão para listar moedas favoritas</string>
     <string name="button_favorite">Adicionadas</string>
-=======
     <string name="add_favorites">Adicionar</string>
     <string name="volume">Volumes negociados</string>
     <string name="last_hour">Última hora</string>
@@ -33,5 +20,4 @@
     <string name="last_month">Último mês</string>
     <string name="dollar_sign">$</string>
     <string name="back_button">Voltar</string>
->>>>>>> develop
 </resources>

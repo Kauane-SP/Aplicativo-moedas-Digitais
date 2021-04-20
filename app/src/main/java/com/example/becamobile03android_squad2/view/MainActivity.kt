@@ -21,11 +21,8 @@ import kotlinx.android.synthetic.main.nav_bar.*
 
 
 class MainActivity : AppCompatActivity() {
-<<<<<<< HEAD
    private val coinData = CoinDate()
-=======
-    private val coinData = CoinDate()
->>>>>>> develop
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,13 +32,10 @@ class MainActivity : AppCompatActivity() {
         viewModel.listCoin.observe(this, Observer{
             setAdapter(it)
             searchListDisplay(it)
-<<<<<<< HEAD
 
            // button_star.setOnClickListener {
            //     clickButton(it)
             //}
-=======
->>>>>>> develop
         }
         )
 
@@ -68,9 +62,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-<<<<<<< HEAD
-=======
-
     private fun resultListSearch( search: String, list: List<Coin>){
         var lisResultSearch :MutableList<Coin> = arrayListOf()
         for(element in list){
@@ -84,33 +75,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun searchListDisplay(list: List<Coin>) {
-        searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String): Boolean {
-                resultListSearch(query, list)
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String): Boolean {
-                resultListSearch(newText, list)
-                return false
-            }
-        })
->>>>>>> develop
-
-    private fun resultListSearch( search: String, list: List<Coin>){
-        var lisResultSearch :MutableList<Coin> = arrayListOf()
-        for(element in list){
-            if(element.name != null ){
-                if(element.name!!.contains(search,ignoreCase = true)){
-                    lisResultSearch.add(element)
-                }
-            }
-        }
-        setAdapter(lisResultSearch)
-    }
-
-<<<<<<< HEAD
     private fun searchListDisplay(list: List<Coin>) {
         searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
@@ -132,7 +96,4 @@ class MainActivity : AppCompatActivity() {
      //     startActivity(intent)
      // }
   //}
-=======
-
->>>>>>> develop
 }
