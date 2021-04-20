@@ -33,6 +33,6 @@ class MainFragment : Fragment() {
 
     private fun handleCoins(coin: List<Coin>) {
         list_recycler_coin?.layoutManager = LinearLayoutManager(context)
-        list_recycler_coin?.adapter = context?.let { CoinAdapter(coin, it) }
+        list_recycler_coin?.adapter = context?.let { CoinAdapter(coin, it,this) }
         }
     }

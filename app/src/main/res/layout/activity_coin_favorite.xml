@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".favorite.CoinFavorit"
+    tools:context=".favorite.CoinFavorite"
     android:background="@color/black">
 
 
@@ -20,28 +20,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <TextView
+        android:id="@+id/data_coin_top_bar"
+        android:layout_margin="16dp"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="00/00/0000"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/text_coin_top_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <GridView
         android:id="@+id/coin_grid_favorit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        tools:listitem="@layout/item_favorit_coin"
+        android:layout_width="405dp"
+        android:layout_height="574dp"
+        android:layout_marginTop="44dp"
         android:numColumns="2"
+        android:padding="5dp"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_coin_top_bar" />
+        app:layout_constraintTop_toBottomOf="@id/text_coin_top_bar"
+        tools:listitem="@layout/item_favorit_coin" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/app_bar_inf"
-        android:layout_width="match_parent"
-        android:layout_gravity="bottom"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/black"
+    <include
+        android:id="@+id/nav_bar"
+        layout="@layout/nav_bar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:itemBackground="@color/black"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/bottom_menu" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
