@@ -45,7 +45,12 @@
             android:layout_marginTop="4dp"
             android:fontFamily="@font/cabin"
             android:textColor="@color/white"
+<<<<<<< HEAD
             android:textSize="14dp"
+=======
+            android:textSize="14sp"
+            tools:text="11"
+>>>>>>> develop
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.219"
@@ -74,7 +79,7 @@
             android:id="@+id/money"
             android:layout_width="14dp"
             android:layout_height="21dp"
-            android:text="@string/value_modey_coin"
+            android:text="@string/dollar_sign"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@+id/price_usd"

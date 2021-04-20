@@ -21,7 +21,11 @@ import kotlinx.android.synthetic.main.nav_bar.*
 
 
 class MainActivity : AppCompatActivity() {
+<<<<<<< HEAD
    private val coinData = CoinDate()
+=======
+    private val coinData = CoinDate()
+>>>>>>> develop
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

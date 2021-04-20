@@ -35,8 +35,8 @@
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/limegreen"
-        android:text="ADICIONAR"
-        android:textSize="20dp"
+        android:text="@string/add_favorites"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -52,8 +52,13 @@
         android:fontFamily="@font/cabin"
         android:gravity="center"
         android:textColor="@color/white"
+<<<<<<< HEAD
         android:textSize="28dp"
         app:layout_constraintBottom_toTopOf="@+id/button_favorite"
+=======
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+>>>>>>> develop
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +72,7 @@
         android:layout_height="31dp"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/id_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -103,9 +108,9 @@
             android:layout_marginStart="96dp"
             android:gravity="center"
             android:fontFamily="@font/cabin"
-            android:text="volumes negociados"
+            android:text="@string/volume"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/last_hour"
@@ -114,8 +119,8 @@
             android:layout_marginTop="100dp"
             android:fontFamily="@font/cabin"
             android:layout_marginStart="20dp"
-            android:text="última hora"
-            android:textSize="20dp"
+            android:text="@string/last_hour"
+            android:textSize="20sp"
             android:textColor="@color/white" />
 
         <TextView
@@ -125,8 +130,8 @@
             android:layout_marginTop="150dp"
             android:fontFamily="@font/cabin"
             android:layout_marginStart="20dp"
-            android:textSize="20dp"
-            android:text="último dia"
+            android:textSize="20sp"
+            android:text="@string/last_day"
             android:textColor="@color/white" />
 
         <TextView
@@ -136,8 +141,8 @@
             android:layout_marginTop="200dp"
             android:fontFamily="@font/cabin"
             android:layout_marginStart="20dp"
-            android:textSize="20dp"
-            android:text="último mês"
+            android:textSize="20sp"
+            android:text="@string/last_month"
             android:textColor="@color/white" />
 
         <TextView
@@ -150,7 +155,7 @@
             android:layout_marginTop="100dp"
             android:textColor="@color/white"
             android:fontFamily="@font/cabin"
-            android:textSize="20dp"
+            android:textSize="20sp"
             tools:text="24783088.66" />
 
         <TextView
@@ -162,7 +167,7 @@
             android:layout_marginTop="150dp"
             android:fontFamily="@font/cabin"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="20sp"
             tools:text="24089491.25" />
 
         <TextView
@@ -174,7 +179,7 @@
             android:fontFamily="@font/cabin"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="20sp"
             tools:text="25901552984.55" />
 
     </androidx.cardview.widget.CardView>
@@ -184,7 +189,7 @@
         android:layout_width="19dp"
         android:layout_height="40dp"
         android:gravity="center"
-        android:text="$"
+        android:text="@string/dollar_sign"
         android:textColor="@color/white"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="@+id/price_day"
@@ -202,7 +207,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="106dp"
         android:fontFamily="@font/cabin"
-        android:text="Voltar"
+        android:text="@string/back_button"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar_back"
