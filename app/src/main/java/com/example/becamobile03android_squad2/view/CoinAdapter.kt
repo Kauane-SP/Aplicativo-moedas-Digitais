@@ -28,7 +28,6 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
     override fun getItemCount(): Int {
         return list.size
     }
-    private lateinit var shardPreference: SharedPreference
 
     class CoinViewHolder(
         itemView: View,
@@ -54,12 +53,16 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
             val imageId = coin.idIcon?.replace("-", "")
             Picasso.get()
                 .load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${imageId}.png")
-                .placeholder(R.mipmap.ic_launcher_round)
+                .placeholder(R.mipmap.ic_coin)
                 .into(imgCoin)
             if (coin.name?.isNotEmpty() == true) {
                 listTitle.text = coin.name.toString()
                 idName.text = coin.assetId.toString()
-                listPrice?.text = coin.priceUsd.toString()
+                if (coin.priceUsd.toString() != "null"){
+                    listPrice?.text = coin.priceUsd.toString()
+                } else {
+                    listPrice?.text = "00.00"
+                }
                 if (coin.favorites){
                     Picasso.get().load(R.drawable.ic_baseline_star_30).into(starFavorite)
                 }
