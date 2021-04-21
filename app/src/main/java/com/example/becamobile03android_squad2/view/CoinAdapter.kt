@@ -58,7 +58,11 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
             if (coin.name?.isNotEmpty() == true) {
                 listTitle.text = coin.name.toString()
                 idName.text = coin.assetId.toString()
-                listPrice?.text = coin.priceUsd.toString()
+                if (coin.priceUsd.toString() != "null"){
+                    listPrice?.text = coin.priceUsd.toString()
+                } else {
+                    listPrice?.text = "0.0"
+                }
                 if (coin.favorites){
                     Picasso.get().load(R.drawable.ic_baseline_star_30).into(starFavorite)
                 }
