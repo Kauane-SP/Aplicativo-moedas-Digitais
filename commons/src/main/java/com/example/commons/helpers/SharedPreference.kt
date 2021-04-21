@@ -1,4 +1,4 @@
-package com.example.becamobile03android_squad2.helpers
+package com.example.commons.helpers
 
 import android.content.Context
 

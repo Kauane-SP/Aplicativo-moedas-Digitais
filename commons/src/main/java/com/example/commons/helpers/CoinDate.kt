@@ -1,4 +1,4 @@
-package com.example.becamobile03android_squad2.helpers
+package com.example.commons.helpers
 
 import java.text.SimpleDateFormat
 import java.util.*

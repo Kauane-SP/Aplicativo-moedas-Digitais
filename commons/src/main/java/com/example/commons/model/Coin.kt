@@ -1,8 +1,10 @@
-package com.example.becamobile03android_squad2.model
+package com.example.commons.model
+
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
+
 
 @Parcelize
 data class Coin(
