@@ -18,7 +18,7 @@ import com.example.becamobile03android_squad2.model.Coin
 import com.example.becamobile03android_squad2.viewModel.CoinViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
     private val coinData = CoinDate()
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         })
     }
 
-    override fun onClick(view: View) {
+     fun onClick(view: View) {
         val id = view.id
 
         when {

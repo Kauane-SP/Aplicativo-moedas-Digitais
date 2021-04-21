@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_details_coin.*
 
 class DetailsCoin : AppCompatActivity() {
 
+    private var coin: Coin? = null
     private lateinit var shardPreference: SharedPreference
     private var iconId: String? = ""
     private var priceId: String? = ""
@@ -52,6 +53,13 @@ class DetailsCoin : AppCompatActivity() {
                 .load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${image}.png")
                 .placeholder(R.mipmap.ic_launcher_round)
                 .into(id_icon)
+            if (coin != null) {
+                if (coin.favorites?.let { shardPreference.getBoolean(it) }) {
+                    favorite_star.visibility = View.VISIBLE
+                } else if (!coin.assetId?.let { shardPreference.getBoolean(it) }!!) {
+                    favorite_star.visibility = View.GONE
+                }
+            }
         }
     }
 
@@ -80,9 +88,12 @@ class DetailsCoin : AppCompatActivity() {
         if (button_favorite.text == "ADICIONAR") {
             shardPreference.storeBoolean(iconId.toString(), true)
             checkButton()
+            coin?.favorites = false
+
         } else if (button_favorite.text == "REMOVER") {
             shardPreference.storeBoolean(iconId.toString(), false)
             checkButton()
+            coin?.favorites = true
         }
     }
 

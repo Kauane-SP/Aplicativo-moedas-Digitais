@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".favorite.CoinFavorit"
+    tools:context=".favorite.CoinFavorite"
     android:background="@color/black">
 
 
@@ -93,7 +93,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/button_star"
+                    android:id="@+id/button_star_favorite"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:backgroundTint="@color/black"

@@ -1,5 +1,6 @@
 package com.example.becamobile03android_squad2.view
 
+import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,6 +38,7 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
         private val listPrice: AppCompatTextView = itemView.findViewById(R.id.price_usd)
         private val imgCoin: AppCompatImageView = itemView.findViewById(R.id.imgcoin)
         private val starFavorite: AppCompatImageView = itemView.findViewById(R.id.favorite_star)
+        private var sharedPreferences = SharedPreferences(this)
 
         init {
             itemView.setOnClickListener {
@@ -55,12 +57,15 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
                 listTitle.text = coin.name.toString()
                 idName.text = coin.assetId.toString()
                 listPrice.text = coin.priceUsd.toString()
+                if (Coin.favorites){
+                    Picasso.get().load(R.drawable.ic_baseline_star_30).into(starFavorite)
+                }
             }
-            // if (coin.assetId?.let { sharedPreferences.getBoolean(it) } == true) {
-            //     starFavorite.visibility = View.VISIBLE
-            // } else if (!coin.assetId?.let { sharedPreferences.getBoolean(it) }!!) {
-            //      starFavorite.visibility = View.GONE
-            //   }
+            if (coin.assetId?.let { sharedPreferences.getBoolean(it) } == true) {
+                 starFavorite.visibility = View.VISIBLE
+             } else if (!coin.assetId?.let { sharedPreferences.getBoolean(it) }!!) {
+                 starFavorite.visibility = View.GONE
+             }
         }
     }
 }
