@@ -21,7 +21,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     private val coinData = CoinDate()
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -49,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         list_recycler_coin.adapter = coin?.let {
             CoinAdapter(
                 coin,
+                this,
                 this
             )
         }

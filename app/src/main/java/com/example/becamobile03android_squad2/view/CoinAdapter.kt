@@ -1,5 +1,6 @@
 package com.example.becamobile03android_squad2.view
 
+import android.content.Context
 import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.View
@@ -12,13 +13,13 @@ import com.example.becamobile03android_squad2.helpers.SharedPreference
 import com.example.becamobile03android_squad2.model.Coin
 import com.squareup.picasso.Picasso
 
-class CoinAdapter(private var list: List<Coin>, private var listener: MainActivity) :
+class CoinAdapter(private var list: List<Coin>, private var listener: MainActivity, private var context: Context) :
     RecyclerView.Adapter<CoinAdapter.CoinViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_coin, parent, false)
 
-        return CoinViewHolder(view, list as MutableList<Coin>, listener)
+        return CoinViewHolder(view, list as MutableList<Coin>, listener, context)
     }
 
     override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
@@ -33,14 +34,15 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
     class CoinViewHolder(
         itemView: View,
         list: List<Coin>,
-        listener: MainActivity
+        listener: MainActivity,
+        context: Context
     ) : RecyclerView.ViewHolder(itemView) {
         private val listTitle: AppCompatTextView = itemView.findViewById(R.id.name_coin)
         private val idName: AppCompatTextView = itemView.findViewById(R.id.id_coin)
         private val listPrice: AppCompatTextView = itemView.findViewById(R.id.price_usd)
         private val imgCoin: AppCompatImageView = itemView.findViewById(R.id.imgcoin)
         private val starFavorite: AppCompatImageView = itemView.findViewById(R.id.favorite_star)
-        private var shardPreference = SharedPreferences(this)
+        private val shardPreference  = SharedPreference(context)
 
         init {
             itemView.setOnClickListener {
