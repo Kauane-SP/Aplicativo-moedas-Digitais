@@ -54,7 +54,7 @@ class DetailsCoin : AppCompatActivity() {
                 .placeholder(R.mipmap.ic_launcher_round)
                 .into(id_icon)
             if (coin != null) {
-                if (coin.favorites?.let { shardPreference.getBoolean(it) }) {
+                if (coin.assetId?.let { shardPreference.getBoolean(it) } == true) {
                     favorite_star.visibility = View.VISIBLE
                 } else if (!coin.assetId?.let { shardPreference.getBoolean(it) }!!) {
                     favorite_star.visibility = View.GONE

@@ -8,6 +8,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.becamobile03android_squad2.R
+import com.example.becamobile03android_squad2.helpers.SharedPreference
 import com.example.becamobile03android_squad2.model.Coin
 import com.squareup.picasso.Picasso
 
@@ -27,6 +28,7 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
     override fun getItemCount(): Int {
         return list.size
     }
+    private lateinit var shardPreference: SharedPreference
 
     class CoinViewHolder(
         itemView: View,
@@ -38,7 +40,7 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
         private val listPrice: AppCompatTextView = itemView.findViewById(R.id.price_usd)
         private val imgCoin: AppCompatImageView = itemView.findViewById(R.id.imgcoin)
         private val starFavorite: AppCompatImageView = itemView.findViewById(R.id.favorite_star)
-        private var sharedPreferences = SharedPreferences(this)
+        private var shardPreference = SharedPreferences(this)
 
         init {
             itemView.setOnClickListener {
@@ -57,7 +59,7 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
                 listTitle.text = coin.name.toString()
                 idName.text = coin.assetId.toString()
                 listPrice.text = coin.priceUsd.toString()
-                if (Coin.favorites){
+                if (coin.favorites){
                     Picasso.get().load(R.drawable.ic_baseline_star_30).into(starFavorite)
                 }
             }
