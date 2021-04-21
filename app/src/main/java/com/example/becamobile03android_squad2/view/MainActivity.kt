@@ -1,21 +1,20 @@
 package com.example.becamobile03android_squad2.view
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.SearchView
 import android.widget.TextView
 import androidx.activity.viewModels
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.becamobile03android_squad2.R
-import com.example.becamobile03android_squad2.favorite.CoinFavorite
-import com.example.becamobile03android_squad2.helpers.CoinDate
-import com.example.becamobile03android_squad2.model.Coin
-import com.example.becamobile03android_squad2.viewModel.CoinViewModel
+import com.example.details.details.DetailsCoin
+import com.example.favorites.favorite.CoinFavorite
+import com.example.commons.helpers.CoinDate
+import com.example.commons.model.Coin
+import com.example.commons.viewModel.CoinViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

@@ -8,8 +8,8 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.becamobile03android_squad2.R
-import com.example.becamobile03android_squad2.helpers.SharedPreference
-import com.example.becamobile03android_squad2.model.Coin
+import com.example.commons.helpers.SharedPreference
+import com.example.commons.model.Coin
 import com.squareup.picasso.Picasso
 
 class CoinAdapter(private var list: List<Coin>, private var listener: MainActivity, private var context: Context) :

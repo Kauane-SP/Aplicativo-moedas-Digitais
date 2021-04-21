@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BECAMOBILE03ANDROIDSQUAD2">
-        <activity android:name=".favorite.CoinFavorite" />
+        <activity android:name="com.example.favorites.favorite.CoinFavorite" />
         <activity android:name=".view.MainActivity" />
-        <activity android:name=".view.DetailsCoin" />
+        <activity android:name="com.example.details.details.DetailsCoin" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
