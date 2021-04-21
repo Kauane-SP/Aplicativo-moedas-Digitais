@@ -86,8 +86,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             }
         })
     }
-    override fun onClick(v: View) {
-        val id = v.id
+    override fun onClick(view: View) {
+        val id = view.id
 
         when{
             (id == R.id.button_main) -> {
@@ -102,11 +102,4 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             }
         }
     }
- // private fun clickButton(view: View){
-     // val page = button_star.id
-     // if(page == view.id){
-      //    val intent = Intent(this, CoinFavorite::class.java)
-     //     startActivity(intent)
-     // }
-  //}
 }

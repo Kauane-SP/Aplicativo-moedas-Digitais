@@ -3,6 +3,7 @@ package com.example.becamobile03android_squad2.favorite
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
@@ -10,8 +11,11 @@ import com.example.becamobile03android_squad2.R
 import com.example.becamobile03android_squad2.helpers.SharedPreference
 import com.example.becamobile03android_squad2.model.Coin
 import com.example.becamobile03android_squad2.view.DetailsCoin
+import com.example.becamobile03android_squad2.view.MainActivity
 import com.example.becamobile03android_squad2.viewModel.CoinViewModel
 import kotlinx.android.synthetic.main.activity_coin_favorite.*
+import kotlinx.android.synthetic.main.activity_coin_favorite.button_star
+import kotlinx.android.synthetic.main.activity_main.*
 
 class CoinFavorite : AppCompatActivity() {
 
@@ -24,8 +28,9 @@ class CoinFavorite : AppCompatActivity() {
         viewModel.init()
         viewModel.listCoin.observe(this, Observer {
             setAdapter(createListFavorite(it))
-        }
-        )
+            button_main_favorite.setOnClickListener{onClick(it)}
+
+        })
     }
 
     private fun setAdapter(coin: List<Coin>?) {
@@ -55,16 +60,13 @@ class CoinFavorite : AppCompatActivity() {
         return listCoinFavorit
     }
 
-
-}
-/*fun onClick(v: View) {
-    val id = v.id
-    val intent = Intent(this, MainActivity::class.java)
-    if (id == R.id.button_main) {
-        startActivity(intent)
-        finish()
+     fun onClick(view: View) {
+        val id = view.id
+        if (id == R.id.button_main_favorite) {
+            finish()
+        }
     }
 }
-    }*/
+
 
 
