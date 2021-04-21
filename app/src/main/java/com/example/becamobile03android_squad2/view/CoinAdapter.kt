@@ -54,7 +54,7 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
             val imageId = coin.idIcon?.replace("-", "")
             Picasso.get()
                 .load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${imageId}.png")
-                .placeholder(R.mipmap.ic_launcher_round)
+                .placeholder(R.mipmap.ic_coin)
                 .into(imgCoin)
             if (coin.name?.isNotEmpty() == true) {
                 listTitle.text = coin.name.toString()
