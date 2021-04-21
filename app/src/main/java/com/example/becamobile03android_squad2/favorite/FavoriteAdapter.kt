@@ -59,7 +59,14 @@ class FavoriteAdapter(private val list: List<Coin>, private val listener: CoinFa
             if (coin.name?.isNotEmpty() == true) {
                 listTitle.text = coin.name.toString()
                 idName.text = coin.assetId.toString()
-                listPrice.text = coin.priceUsd.toString()
+//                listPrice.text = coin.priceUsd.toString()
+
+                if (coin.priceUsd.toString() != "null"){
+                    listPrice.text = coin.priceUsd.toString()
+                } else {
+                    listPrice.text = "00.00"
+                }
+
             }
         }
     }

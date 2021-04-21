@@ -10,7 +10,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="160dp"
-        android:layout_height="130dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/fundo_card_favorit_item"
         android:layout_margin="20dp"
         android:padding="20dp"
