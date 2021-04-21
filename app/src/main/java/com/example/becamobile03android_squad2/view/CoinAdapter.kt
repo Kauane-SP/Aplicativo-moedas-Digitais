@@ -63,9 +63,9 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
                     Picasso.get().load(R.drawable.ic_baseline_star_30).into(starFavorite)
                 }
             }
-            if (coin.assetId?.let { sharedPreferences.getBoolean(it) } == true) {
+            if (coin.assetId?.let { shardPreference.getBoolean(it) } == true) {
                  starFavorite.visibility = View.VISIBLE
-             } else if (!coin.assetId?.let { sharedPreferences.getBoolean(it) }!!) {
+             } else if (!coin.assetId?.let { shardPreference.getBoolean(it) }!!) {
                  starFavorite.visibility = View.GONE
              }
         }
