@@ -44,7 +44,7 @@ class DetailsCoin : AppCompatActivity() {
             monthId = coin?.volumeMonth
 
             id_coin.text = coin?.assetId
-            price_day.text = coin?.priceUsd
+            price_day.text = coin?.priceUsd ?: "00.00"
             volume_1hrs_usd.text = coin?.volumeHour
             volume_1day_usd.text = coin?.volumeDay
             volume_1mth_usd.text = coin?.volumeMonth
