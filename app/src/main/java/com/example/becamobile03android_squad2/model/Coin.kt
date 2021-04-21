@@ -15,4 +15,4 @@ data class Coin(
     @SerializedName("id_icon") var idIcon: String?,
     @SerializedName("price_usd") var priceUsd: String?,
     var favorite: Boolean
-): Parcelable 
+) : Parcelable

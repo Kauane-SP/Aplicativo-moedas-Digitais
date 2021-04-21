@@ -28,7 +28,7 @@ class CoinFavorite : AppCompatActivity() {
         viewModel.init()
         viewModel.listCoin.observe(this, Observer {
             setAdapter(createListFavorite(it))
-            button_main_favorite.setOnClickListener{onClick(it)}
+            button_main_favorite.setOnClickListener { onClick(it) }
 
         })
     }
@@ -60,7 +60,7 @@ class CoinFavorite : AppCompatActivity() {
         return listCoinFavorit
     }
 
-     fun onClick(view: View) {
+    fun onClick(view: View) {
         val id = view.id
         if (id == R.id.button_main_favorite) {
             finish()

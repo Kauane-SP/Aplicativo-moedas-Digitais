@@ -9,10 +9,12 @@ import retrofit2.http.Query
 interface CoinApi {
 
     @GET("v1/assets?")
-    fun getAllList(@Query("apiKey") api:String): retrofit2.Call<List<Coin>>
+    fun getAllList(@Query("apiKey") api: String): retrofit2.Call<List<Coin>>
 
     @GET("v1/assets?/asset_id")
-    fun getAllDetails(@Path("asset_id")
-                      asset_id : String, @Query("apiKey") apiKey: String):
+    fun getAllDetails(
+        @Path("asset_id")
+        asset_id: String, @Query("apiKey") apiKey: String
+    ):
             Call<Coin>
 }

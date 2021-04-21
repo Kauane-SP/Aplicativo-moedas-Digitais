@@ -7,11 +7,13 @@ import com.example.becamobile03android_squad2.model.Coin
 import retrofit2.Call
 import retrofit2.Response
 
-open class CoinViewModel : ViewModel() { val listCoinResult: MutableList<Coin> = arrayListOf()
+open class CoinViewModel : ViewModel() {
+    val listCoinResult: MutableList<Coin> = arrayListOf()
     private val coinLiveData: MutableLiveData<List<Coin>> = MutableLiveData()
     val listCoin: MutableLiveData<List<Coin>>
         get() = coinLiveData
-    fun init(){
+
+    fun init() {
         callListCoin()
     }
 

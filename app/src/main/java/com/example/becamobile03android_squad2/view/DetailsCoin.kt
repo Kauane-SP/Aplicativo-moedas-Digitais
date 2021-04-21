@@ -47,7 +47,6 @@ class DetailsCoin : AppCompatActivity() {
             volume_1day_usd.text = coin?.volumeDay
             volume_1mth_usd.text = coin?.volumeMonth
 
-
             val image = coin?.idIcon?.replace("-", "")
             Picasso.get()
                 .load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${image}.png")
@@ -76,7 +75,6 @@ class DetailsCoin : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-
     private fun onClikStatusCoin(view: View) {
 
         if (button_favorite.text == "ADICIONAR") {
@@ -88,13 +86,11 @@ class DetailsCoin : AppCompatActivity() {
         }
     }
 
-
     private fun checkButton() {
         if (shardPreference.getBoolean(iconId.toString())) {
             button_favorite.text = "REMOVER"
         } else if (!shardPreference.getBoolean(iconId.toString())) {
             button_favorite.text = "ADICIONAR"
         }
-
     }
 }

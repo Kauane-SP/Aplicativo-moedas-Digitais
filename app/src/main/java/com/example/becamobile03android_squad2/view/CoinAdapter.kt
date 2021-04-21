@@ -39,10 +39,10 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
         private val starFavorite: AppCompatImageView = itemView.findViewById(R.id.favorite_star)
 
         init {
-           itemView.setOnClickListener {
+            itemView.setOnClickListener {
                 listener.clickCoin(list[adapterPosition])
-           }
-       }
+            }
+        }
 
         fun bind(coin: Coin) {
 
@@ -56,11 +56,11 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
                 idName.text = coin.assetId.toString()
                 listPrice.text = coin.priceUsd.toString()
             }
-               // if (coin.assetId?.let { sharedPreferences.getBoolean(it) } == true) {
-               //     starFavorite.visibility = View.VISIBLE
-               // } else if (!coin.assetId?.let { sharedPreferences.getBoolean(it) }!!) {
-              //      starFavorite.visibility = View.GONE
-             //   }
-            }
+            // if (coin.assetId?.let { sharedPreferences.getBoolean(it) } == true) {
+            //     starFavorite.visibility = View.VISIBLE
+            // } else if (!coin.assetId?.let { sharedPreferences.getBoolean(it) }!!) {
+            //      starFavorite.visibility = View.GONE
+            //   }
         }
+    }
 }
