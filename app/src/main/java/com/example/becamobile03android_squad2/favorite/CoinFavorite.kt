@@ -22,7 +22,7 @@ class CoinFavorite : AppCompatActivity() {
         sharedPreference = SharedPreference(this)
         val viewModel: CoinViewModel by viewModels()
         viewModel.init()
-        viewModel.listCoin.observe(this, Observer{
+        viewModel.listCoin.observe(this, Observer {
             setAdapter(createListFavorite(it))
         }
         )
@@ -38,17 +38,17 @@ class CoinFavorite : AppCompatActivity() {
         }
     }
 
-    fun clickCoin(coin: Coin){
-        val intent =  Intent(this, DetailsCoin::class.java)
+    fun clickCoin(coin: Coin) {
+        val intent = Intent(this, DetailsCoin::class.java)
         intent.putExtra("coin", coin)
         startActivity(intent)
         finish()
     }
 
-    private fun createListFavorite(list: List<Coin>) : MutableList<Coin>{
+    private fun createListFavorite(list: List<Coin>): MutableList<Coin> {
         var listCoinFavorit: MutableList<Coin> = arrayListOf()
-        for(element in list){
-            if(sharedPreference.getBoolean(element.assetId.toString())){
+        for (element in list) {
+            if (sharedPreference.getBoolean(element.assetId.toString())) {
                 listCoinFavorit.add(element)
             }
         }
@@ -57,14 +57,14 @@ class CoinFavorite : AppCompatActivity() {
 
 
 }
-    /*fun onClick(v: View) {
-        val id = v.id
-        val intent = Intent(this, MainActivity::class.java)
-        if (id == R.id.button_main) {
-            startActivity(intent)
-            finish()
-        }
+/*fun onClick(v: View) {
+    val id = v.id
+    val intent = Intent(this, MainActivity::class.java)
+    if (id == R.id.button_main) {
+        startActivity(intent)
+        finish()
     }
-        }*/
+}
+    }*/
 
 

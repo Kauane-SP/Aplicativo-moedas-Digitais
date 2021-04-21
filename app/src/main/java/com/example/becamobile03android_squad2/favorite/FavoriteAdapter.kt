@@ -10,17 +10,16 @@ import com.example.becamobile03android_squad2.R
 import com.example.becamobile03android_squad2.model.Coin
 import com.squareup.picasso.Picasso
 
-class FavoriteAdapter (
-    private var list: List<Coin>,
-    private var listener: CoinFavorite
-    ) : RecyclerView.Adapter<FavoriteAdapter.CoinViewHolder>() {
+class FavoriteAdapter(private val list: List<Coin>, private val listener: CoinFavorite) :
+    RecyclerView.Adapter<FavoriteAdapter.CoinViewHolder>() {
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinViewHolder {
-        val view = LayoutInflater.from(parent.context)
+        val View = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_favorit_coin, parent, false)
 
         return CoinViewHolder(
-            view,
+            View,
             list as MutableList<Coin>,
             listener
         )
@@ -30,9 +29,9 @@ class FavoriteAdapter (
         holder.bind(list[position])
     }
 
-        override fun getItemCount(): Int {
-            return list.size
-        }
+    override fun getItemCount(): Int {
+        return list.size
+    }
 
     class CoinViewHolder(
         itemView: View,
