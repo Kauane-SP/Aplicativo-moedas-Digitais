@@ -5,8 +5,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 
 class ButtonNavigation {
-    fun buttonNavigation(imageButton: ImageButton, textView: TextView, color: String) {
+    fun buttonNavigation(imageButton: ImageButton, color: String) {
         imageButton.setColorFilter(Color.parseColor("$color"))
-        textView.setTextColor(Color.parseColor("$color"))
     }
 }

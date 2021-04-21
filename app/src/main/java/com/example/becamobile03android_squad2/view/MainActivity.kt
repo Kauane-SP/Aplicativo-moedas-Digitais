@@ -18,16 +18,15 @@ import com.example.becamobile03android_squad2.model.Coin
 import com.example.becamobile03android_squad2.viewModel.CoinViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(),View.OnClickListener {
-   private val coinData = CoinDate()
+class MainActivity : AppCompatActivity() {
+    private val coinData = CoinDate()
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val viewModel: CoinViewModel by viewModels()
         viewModel.init()
-        viewModel.listCoin.observe(this, Observer{
+        viewModel.listCoin.observe(this, Observer {
             setAdapter(it)
             searchListDisplay(it)
 
@@ -43,35 +42,35 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         }
         button_star.setOnClickListener { onClick(it) }
     }
+
     private fun setAdapter(coin: List<Coin>?) {
         list_recycler_coin.layoutManager = GridLayoutManager(this@MainActivity, 1)
         list_recycler_coin.adapter = coin?.let {
             CoinAdapter(
                 coin,
+                this,
                 this
             )
         }
     }
 
-
-    fun clickCoin(coin: Coin){
-        val intent =  Intent(this, DetailsCoin::class.java)
+    fun clickCoin(coin: Coin) {
+        val intent = Intent(this, DetailsCoin::class.java)
         intent.putExtra("coin", coin)
         startActivity(intent)
     }
 
-    private fun resultListSearch( search: String, list: List<Coin>){
-        var lisResultSearch :MutableList<Coin> = arrayListOf()
-        for(element in list){
-            if(element.name != null ){
-                if(element.name!!.contains(search,ignoreCase = true)){
+    private fun resultListSearch(search: String, list: List<Coin>) {
+        var lisResultSearch: MutableList<Coin> = arrayListOf()
+        for (element in list) {
+            if (element.name != null) {
+                if (element.name!!.contains(search, ignoreCase = true)) {
                     lisResultSearch.add(element)
                 }
             }
         }
         setAdapter(lisResultSearch)
     }
-
 
     private fun searchListDisplay(list: List<Coin>) {
         searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -86,10 +85,11 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             }
         })
     }
-    override fun onClick(v: View) {
-        val id = v.id
 
-        when{
+     fun onClick(view: View) {
+        val id = view.id
+
+        when {
             (id == R.id.button_main) -> {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
@@ -102,11 +102,4 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             }
         }
     }
- // private fun clickButton(view: View){
-     // val page = button_star.id
-     // if(page == view.id){
-      //    val intent = Intent(this, CoinFavorite::class.java)
-     //     startActivity(intent)
-     // }
-  //}
 }

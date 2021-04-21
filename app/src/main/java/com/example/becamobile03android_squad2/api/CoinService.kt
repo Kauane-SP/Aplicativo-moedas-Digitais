@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class CoinService {
 
-    companion object{
+    companion object {
         const val BASE_URL = "https://rest.coinapi.io"
 
         var retrofit: Retrofit = Retrofit.Builder()
@@ -14,6 +14,7 @@ class CoinService {
             .build()
 
         fun coinRetrofitApi(): CoinApi = retrofit.create(
-            CoinApi::class.java)
+            CoinApi::class.java
+        )
     }
 }

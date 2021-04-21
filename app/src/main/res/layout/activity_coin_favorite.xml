@@ -68,7 +68,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/button_main"
+                    android:id="@+id/button_main_favorite"
                     android:layout_width="205dp"
                     android:layout_height="50dp"
                     android:layout_gravity="top"
@@ -93,7 +93,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/button_star"
+                    android:id="@+id/button_star_favorite"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:backgroundTint="@color/black"
