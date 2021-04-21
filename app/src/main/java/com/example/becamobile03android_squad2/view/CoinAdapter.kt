@@ -28,7 +28,6 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
     override fun getItemCount(): Int {
         return list.size
     }
-    private lateinit var shardPreference: SharedPreference
 
     class CoinViewHolder(
         itemView: View,
