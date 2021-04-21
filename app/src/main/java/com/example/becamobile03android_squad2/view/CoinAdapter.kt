@@ -1,7 +1,6 @@
 package com.example.becamobile03android_squad2.view
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,7 +38,7 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
     ) : RecyclerView.ViewHolder(itemView) {
         private val listTitle: AppCompatTextView = itemView.findViewById(R.id.name_coin)
         private val idName: AppCompatTextView = itemView.findViewById(R.id.id_coin)
-        private val listPrice: AppCompatTextView = itemView.findViewById(R.id.price_usd)
+        private val listPrice: AppCompatTextView? = itemView?.findViewById(R.id.price_usd)
         private val imgCoin: AppCompatImageView = itemView.findViewById(R.id.imgcoin)
         private val starFavorite: AppCompatImageView = itemView.findViewById(R.id.favorite_star)
         private val shardPreference  = SharedPreference(context)
@@ -60,7 +59,7 @@ class CoinAdapter(private var list: List<Coin>, private var listener: MainActivi
             if (coin.name?.isNotEmpty() == true) {
                 listTitle.text = coin.name.toString()
                 idName.text = coin.assetId.toString()
-                listPrice.text = coin.priceUsd.toString()
+                listPrice?.text = coin.priceUsd.toString()
                 if (coin.favorites){
                     Picasso.get().load(R.drawable.ic_baseline_star_30).into(starFavorite)
                 }
