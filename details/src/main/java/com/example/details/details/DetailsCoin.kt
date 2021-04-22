@@ -55,7 +55,7 @@ class DetailsCoin : AppCompatActivity() {
             val image = coin?.idIcon?.replace("-", "")
             Picasso.get()
                 .load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${image}.png")
-                .placeholder(R.mipmap.ic_launcher_round)
+                .placeholder(R.mipmap.details_ic_launcher_round)
                 .into(id_icon)
             if (coin != null) {
                 if (coin.assetId?.let { shardPreference.getBoolean(it) } == true) {

@@ -10,7 +10,8 @@
         android:id="@+id/item_coin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/darkgray">
+        android:background="@color/darkgray"
+        android:contentDescription="@string/description_coin_info">
 
         <ImageView
             android:id="@+id/imgcoin"
@@ -44,7 +45,7 @@
             android:layout_marginTop="4dp"
             android:fontFamily="@font/cabin"
             android:textColor="@color/white"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.239"

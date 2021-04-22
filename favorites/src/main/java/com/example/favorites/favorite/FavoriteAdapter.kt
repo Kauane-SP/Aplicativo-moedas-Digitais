@@ -54,7 +54,7 @@ class FavoriteAdapter(private val list: List<Coin>, private val listener: CoinFa
             val imageId = coin.idIcon?.replace("-", "")
             Picasso.get()
                 .load("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/${imageId}.png")
-                .placeholder(R.mipmap.ic_launcher_round)
+                .placeholder(R.mipmap.favorites_ic_launcher_round)
                 .into(imgCoin)
             if (coin.name?.isNotEmpty() == true) {
                 listTitle.text = coin.name.toString()
