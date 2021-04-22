@@ -74,7 +74,7 @@
                     android:layout_gravity="top"
                     android:backgroundTint="@color/black"
                     android:padding="100dp"
-                    android:src="@drawable/ic_baseline_attach_money_30" />
+                    android:src="@drawable/favorites_ic_baseline_attach_money_30" />
 
                 <TextView
                     android:id="@+id/txt_main"
@@ -98,7 +98,7 @@
                     android:layout_height="50dp"
                     android:backgroundTint="@color/black"
                     android:padding="100dp"
-                    android:src="@drawable/ic_baseline_star_30" />
+                    android:src="@drawable/favorites_ic_baseline_star_30" />
 
                 <TextView
                     android:id="@+id/txt_favorite"
