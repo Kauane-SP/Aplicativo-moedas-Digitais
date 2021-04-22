@@ -16,7 +16,7 @@
         android:text="@string/title_digital_coin"
         android:contentDescription="@string/description_digital_coin"
         android:textColor="@color/white"
-        android:textSize="48sp"
+        android:textSize="@dimen/textSize48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.603"

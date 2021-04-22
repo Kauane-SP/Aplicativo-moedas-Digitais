@@ -109,7 +109,6 @@ class DetailsCoin : AppCompatActivity() {
         } else if (!shardPreference.getBoolean(iconId.toString())) {
             button_favorite.text = "ADICIONAR"
             favorite_star.visibility = View.GONE
-
         }
     }
 }
