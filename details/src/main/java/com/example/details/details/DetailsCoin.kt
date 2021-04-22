@@ -70,7 +70,6 @@ class DetailsCoin : AppCompatActivity() {
     private fun clickButtonBack(view: View) {
         val page = back_button.id
         if (page == view.id) {
-//            val intent = Intent(this, CoinFavorite::class.java)
             val intent = Intent()
             intent.setClassName(this, "com.example.favorites.favorite.CoinFavorite")
             startActivity(intent)
