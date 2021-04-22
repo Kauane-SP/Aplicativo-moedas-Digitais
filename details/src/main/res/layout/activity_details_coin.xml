@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/limegreen"
+    android:background="@color/details_limegreen"
     android:textAlignment="viewStart"
     tools:context="com.example.details.details.DetailsCoin">
 
@@ -38,7 +38,7 @@
         android:id="@+id/button_favorite"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:backgroundTint="@color/limegreen"
+        android:backgroundTint="@color/details_limegreen"
         android:text="@string/add_favorites"
         android:contentDescription="@string/description_add_remove_button"
         android:textSize="20sp"
