@@ -8,15 +8,16 @@
     android:textAlignment="viewStart"
     tools:context="com.example.details.details.DetailsCoin">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_back"
-        android:layout_width="95dp"
-        android:layout_height="29dp"
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/ic_baseline_arrow_back_30"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/abc_vector_test" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/id_icon"
@@ -258,10 +259,10 @@
         android:text="@string/back_button"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar_back"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
         app:layout_constraintEnd_toStartOf="@+id/id_coin"
         app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="@+id/toolbar_back"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

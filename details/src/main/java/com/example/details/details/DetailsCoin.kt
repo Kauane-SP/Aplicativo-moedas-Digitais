@@ -1,5 +1,6 @@
 package com.example.details.details
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -28,7 +29,9 @@ class DetailsCoin : AppCompatActivity() {
         shardPreference = SharedPreference(this)
 
         getExtra()
-        setupToolbar(toolbar_back, "Voltar", true)
+        back_button.setOnClickListener {
+            clickButtonBack(it)
+        }
 
         button_favorite.setOnClickListener { onClikStatusCoin(it) }
         checkButton()
@@ -64,14 +67,15 @@ class DetailsCoin : AppCompatActivity() {
         }
     }
 
-    fun setupToolbar(
-        toolbar: androidx.appcompat.widget.Toolbar,
-        title: String,
-        navigationBack: Boolean
-    ) {
-        toolbar.title = title
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(navigationBack)
+    private fun clickButtonBack(view: View) {
+        val page = back_button.id
+        if (page == view.id) {
+//            val intent = Intent(this, CoinFavorite::class.java)
+            val intent = Intent()
+            intent.setClassName(this, "com.example.favorites.favorite.CoinFavorite")
+            startActivity(intent)
+            finish()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
