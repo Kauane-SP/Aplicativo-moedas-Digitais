@@ -20,4 +20,8 @@
     <string name="last_month">Último mês</string>
     <string name="dollar_sign">$</string>
     <string name="back_button">Voltar</string>
+    <string name="description_digital_coin">Texto moeda digital</string>
+    <string name="description_search_bar">Barra de busca</string>
+    <string name="description_coin_info">Informações das moedas</string>
+
 </resources>

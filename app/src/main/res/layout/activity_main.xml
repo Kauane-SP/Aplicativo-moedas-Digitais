@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/title_digital_coin"
+        android:contentDescription="@string/description_digital_coin"
         android:gravity="center"
         android:textColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,6 +45,7 @@
         android:contextClickable="true"
         android:inputType="text"
         android:queryHint="@string/search_bar"
+        android:contentDescription="@string/description_search_bar"
         app:layout_constraintTop_toBottomOf="@+id/data_coin_top_bar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
