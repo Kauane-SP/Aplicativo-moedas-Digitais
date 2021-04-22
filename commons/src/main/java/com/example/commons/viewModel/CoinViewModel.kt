@@ -26,7 +26,18 @@ open class CoinViewModel : ViewModel() {
                 if (response.isSuccessful)
                     response.body()?.forEach {
                         listCoinResult.add(it)
+                    }else {response.errorBody()?.let {
+                    when(response.code()){
+                        400 -> ("Bad request")
+                        401 -> ("Unauthorized")
+                        403 -> ("Forbidden")
+                        429 -> ("too many requests")
+                        550 -> ("No date ")
+                        else -> ("Error")
                     }
+                }
+
+                }
                 coinLiveData.postValue(listCoinResult)
             }
 
@@ -36,4 +47,5 @@ open class CoinViewModel : ViewModel() {
         })
     }
 }
+
 
