@@ -40,7 +40,7 @@
         android:backgroundTint="@color/details_limegreen"
         android:text="@string/details_add_favorites"
         android:contentDescription="@string/details_description_add_remove_button"
-        android:textSize="20sp"
+        android:textSize="@dimen/details_textSize20sp"
         app:cornerRadius="10dp"
         android:textColor="@color/details_white"
         app:strokeColor="@color/details_white"
@@ -60,7 +60,7 @@
         android:fontFamily="@font/cabin"
         android:gravity="center"
         android:textColor="@color/details_white"
-        android:textSize="28sp"
+        android:textSize="@dimen/details_textSize28sp"
         android:contentDescription="@string/details_description_coin_value"
         app:layout_constraintBottom_toTopOf="@+id/button_favorite"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +90,7 @@
         android:layout_height="31dp"
         android:gravity="center"
         android:textColor="@color/details_white"
-        android:textSize="20sp"
+        android:textSize="@dimen/details_textSize20sp"
         app:layout_constraintBottom_toTopOf="@+id/id_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -128,7 +128,7 @@
             android:gravity="center"
             android:text="@string/details_volume"
             android:textColor="@color/details_white"
-            android:textSize="24sp" />
+            android:textSize="@dimen/details_textSize24sp" />
 
         <TextView
             android:id="@+id/last_hour"
@@ -139,7 +139,7 @@
             android:fontFamily="@font/cabin"
             android:text="@string/details_last_hour"
             android:textColor="@color/details_white"
-            android:textSize="20sp" />
+            android:textSize="@dimen/details_textSize20sp" />
 
         <TextView
             android:id="@+id/last_day"
@@ -150,7 +150,7 @@
             android:fontFamily="@font/cabin"
             android:text="@string/details_last_day"
             android:textColor="@color/details_white"
-            android:textSize="20sp" />
+            android:textSize="@dimen/details_textSize20sp" />
 
         <TextView
             android:id="@+id/last_month"
@@ -161,7 +161,7 @@
             android:fontFamily="@font/cabin"
             android:text="@string/details_last_month"
             android:textColor="@color/details_white"
-            android:textSize="20sp" />
+            android:textSize="@dimen/details_textSize20sp" />
 
         <TextView
             android:id="@+id/volume_1hrs_usd"
@@ -172,7 +172,7 @@
             android:fontFamily="@font/cabin"
             android:gravity="center"
             android:textColor="@color/details_white"
-            android:textSize="20sp"
+            android:textSize="@dimen/details_textSize20sp"
             android:contentDescription="@string/details_description_1hr_value"
             tools:text="24783088.66" />
 
@@ -185,7 +185,7 @@
             android:fontFamily="@font/cabin"
             android:gravity="center"
             android:textColor="@color/details_white"
-            android:textSize="20sp"
+            android:textSize="@dimen/details_textSize20sp"
             android:contentDescription="@string/details_description_day_value"
             tools:text="24089491.25" />
 
@@ -198,7 +198,7 @@
             android:fontFamily="@font/cabin"
             android:gravity="center"
             android:textColor="@color/details_white"
-            android:textSize="20sp"
+            android:textSize="@dimen/details_textSize20sp"
             android:contentDescription="@string/details_description_month_value"
             tools:text="25901552984.55" />
 
@@ -212,7 +212,7 @@
             android:gravity="center"
             android:text="@string/details_dollar_sign"
             android:textColor="@color/details_white"
-            android:textSize="20sp" />
+            android:textSize="@dimen/details_textSize20sp" />
 
         <TextView
             android:id="@+id/cifr3"
@@ -224,7 +224,7 @@
             android:gravity="center"
             android:text="@string/details_dollar_sign"
             android:textColor="@color/details_white"
-            android:textSize="20sp" />
+            android:textSize="@dimen/details_textSize20sp" />
 
         <TextView
             android:id="@+id/cifr4"
@@ -236,7 +236,7 @@
             android:gravity="center"
             android:text="@string/details_dollar_sign"
             android:textColor="@color/details_white"
-            android:textSize="20sp" />
+            android:textSize="@dimen/details_textSize20sp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -247,7 +247,7 @@
         android:gravity="center"
         android:text="@string/details_dollar_sign"
         android:textColor="@color/details_white"
-        android:textSize="32sp"
+        android:textSize="@dimen/details_textSize32sp"
         app:layout_constraintBottom_toBottomOf="@+id/price_day"
         app:layout_constraintEnd_toStartOf="@+id/price_day"
         app:layout_constraintHorizontal_bias="1.0"
@@ -264,7 +264,7 @@
         android:fontFamily="@font/cabin"
         android:text="@string/details_back_button"
         android:textColor="@color/details_white"
-        android:textSize="18sp"
+        android:textSize="@dimen/details_textSize18sp"
         app:layout_constraintBottom_toBottomOf="@+id/back_button"
         app:layout_constraintEnd_toStartOf="@+id/id_coin"
         app:layout_constraintHorizontal_bias="0.875"
