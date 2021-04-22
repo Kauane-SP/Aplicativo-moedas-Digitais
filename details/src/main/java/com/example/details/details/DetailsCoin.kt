@@ -71,7 +71,7 @@ class DetailsCoin : AppCompatActivity() {
         val page = back_button.id
         if (page == view.id) {
             val intent = Intent()
-            intent.setClassName(this, "com.example.favorites.favorite.CoinFavorite")
+            intent.setClassName(this, "com.example.becamobile03android_squad2.view.MainActivity")
             startActivity(intent)
             finish()
         }

@@ -62,6 +62,9 @@ class CoinFavorite : AppCompatActivity() {
     fun onClick(view: View) {
         val id = view.id
         if (id == R.id.button_main_favorite) {
+//            val intent = Intent()
+//            intent.setClassName(this, "com.example.becamobile03android_squad2.view.MainActivity")
+//            startActivity(intent)
             finish()
         }
     }
