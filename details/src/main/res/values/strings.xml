@@ -21,4 +21,10 @@
     <string name="dollar_sign">$</string>
     <string name="back_button">Voltar</string>
     <string name="description_back_button">Botão de voltar</string>
+    <string name="description_coin_image">Imagem da moeda</string>
+    <string name="description_add_remove_button">Botão de adicionar/remover favorito</string>
+    <string name="description_coin_value">Valor da moeda</string>
+    <string name="description_1hr_value">Valor da ultima hora</string>
+    <string name="description_day_value">Valor do ultimo dia</string>
+    <string name="description_month_value">Valor do ultimo mês</string>
 </resources>

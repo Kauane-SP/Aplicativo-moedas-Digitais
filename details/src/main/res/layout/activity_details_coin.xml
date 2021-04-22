@@ -30,7 +30,9 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937" />
+        app:layout_constraintVertical_bias="0.937"
+        android:contentDescription="@string/description_coin_image"
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_favorite"
@@ -38,6 +40,7 @@
         android:layout_height="60dp"
         android:backgroundTint="@color/limegreen"
         android:text="@string/add_favorites"
+        android:contentDescription="@string/description_add_remove_button"
         android:textSize="20sp"
         app:cornerRadius="10dp"
         android:textColor="@color/white"
@@ -58,7 +61,8 @@
         android:fontFamily="@font/cabin"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="28dp"
+        android:textSize="28sp"
+        android:contentDescription="@string/description_coin_value"
         app:layout_constraintBottom_toTopOf="@+id/button_favorite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -168,9 +172,9 @@
             android:layout_marginTop="100dp"
             android:fontFamily="@font/cabin"
             android:gravity="center"
-            android:hint="@string/coin_value_zero"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:contentDescription="@string/description_1hr_value"
             tools:text="24783088.66" />
 
         <TextView
@@ -183,6 +187,7 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:contentDescription="@string/description_day_value"
             tools:text="24089491.25" />
 
         <TextView
@@ -195,6 +200,7 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:contentDescription="@string/description_month_value"
             tools:text="25901552984.55" />
 
         <TextView
