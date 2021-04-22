@@ -14,7 +14,6 @@
         android:layout_height="40dp"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/white"
         android:background="@drawable/details_ic_baseline_arrow_back_30"
         android:contentDescription="@string/details_description_back_button"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -43,8 +42,8 @@
         android:contentDescription="@string/details_description_add_remove_button"
         android:textSize="20sp"
         app:cornerRadius="10dp"
-        android:textColor="@color/white"
-        app:strokeColor="@color/white"
+        android:textColor="@color/details_white"
+        app:strokeColor="@color/details_white"
         app:strokeWidth="2dp"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +59,7 @@
         android:layout_marginTop="36dp"
         android:fontFamily="@font/cabin"
         android:gravity="center"
-        android:textColor="@color/white"
+        android:textColor="@color/details_white"
         android:textSize="28sp"
         android:contentDescription="@string/details_description_coin_value"
         app:layout_constraintBottom_toTopOf="@+id/button_favorite"
@@ -75,7 +74,7 @@
         android:id="@+id/favorite_star"
         android:layout_width="22dp"
         android:layout_height="22dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/details_white"
         android:src="@drawable/details_ic_baseline_star_30"
         app:layout_constraintBottom_toTopOf="@+id/id_icon"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +89,7 @@
         android:layout_width="50dp"
         android:layout_height="31dp"
         android:gravity="center"
-        android:textColor="@color/white"
+        android:textColor="@color/details_white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/id_icon"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,7 +110,7 @@
         android:layout_width="match_parent"
         android:layout_height="382dp"
         android:layout_marginTop="40dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/details_black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -128,7 +127,7 @@
             android:fontFamily="@font/cabin"
             android:gravity="center"
             android:text="@string/details_volume"
-            android:textColor="@color/white"
+            android:textColor="@color/details_white"
             android:textSize="24sp" />
 
         <TextView
@@ -139,7 +138,7 @@
             android:layout_marginTop="100dp"
             android:fontFamily="@font/cabin"
             android:text="@string/details_last_hour"
-            android:textColor="@color/white"
+            android:textColor="@color/details_white"
             android:textSize="20sp" />
 
         <TextView
@@ -150,7 +149,7 @@
             android:layout_marginTop="150dp"
             android:fontFamily="@font/cabin"
             android:text="@string/details_last_day"
-            android:textColor="@color/white"
+            android:textColor="@color/details_white"
             android:textSize="20sp" />
 
         <TextView
@@ -161,7 +160,7 @@
             android:layout_marginTop="200dp"
             android:fontFamily="@font/cabin"
             android:text="@string/details_last_month"
-            android:textColor="@color/white"
+            android:textColor="@color/details_white"
             android:textSize="20sp" />
 
         <TextView
@@ -172,7 +171,7 @@
             android:layout_marginTop="100dp"
             android:fontFamily="@font/cabin"
             android:gravity="center"
-            android:textColor="@color/white"
+            android:textColor="@color/details_white"
             android:textSize="20sp"
             android:contentDescription="@string/details_description_1hr_value"
             tools:text="24783088.66" />
@@ -185,7 +184,7 @@
             android:layout_marginTop="150dp"
             android:fontFamily="@font/cabin"
             android:gravity="center"
-            android:textColor="@color/white"
+            android:textColor="@color/details_white"
             android:textSize="20sp"
             android:contentDescription="@string/details_description_day_value"
             tools:text="24089491.25" />
@@ -198,7 +197,7 @@
             android:layout_marginTop="200dp"
             android:fontFamily="@font/cabin"
             android:gravity="center"
-            android:textColor="@color/white"
+            android:textColor="@color/details_white"
             android:textSize="20sp"
             android:contentDescription="@string/details_description_month_value"
             tools:text="25901552984.55" />
@@ -212,7 +211,7 @@
             android:fontFamily="@font/cabin"
             android:gravity="center"
             android:text="@string/details_dollar_sign"
-            android:textColor="@color/white"
+            android:textColor="@color/details_white"
             android:textSize="20sp" />
 
         <TextView
@@ -224,7 +223,7 @@
             android:fontFamily="@font/cabin"
             android:gravity="center"
             android:text="@string/details_dollar_sign"
-            android:textColor="@color/white"
+            android:textColor="@color/details_white"
             android:textSize="20sp" />
 
         <TextView
@@ -236,7 +235,7 @@
             android:fontFamily="@font/cabin"
             android:gravity="center"
             android:text="@string/details_dollar_sign"
-            android:textColor="@color/white"
+            android:textColor="@color/details_white"
             android:textSize="20sp" />
 
     </androidx.cardview.widget.CardView>
@@ -247,7 +246,7 @@
         android:layout_height="40dp"
         android:gravity="center"
         android:text="@string/details_dollar_sign"
-        android:textColor="@color/white"
+        android:textColor="@color/details_white"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="@+id/price_day"
         app:layout_constraintEnd_toStartOf="@+id/price_day"
@@ -264,7 +263,7 @@
         android:layout_marginEnd="80dp"
         android:fontFamily="@font/cabin"
         android:text="@string/details_back_button"
-        android:textColor="@color/white"
+        android:textColor="@color/details_white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/back_button"
         app:layout_constraintEnd_toStartOf="@+id/id_coin"
