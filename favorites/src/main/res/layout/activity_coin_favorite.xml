@@ -13,7 +13,7 @@
         android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title_digital_coin"
+        android:text="@string/favorites_title_digital_coin"
         android:gravity="center"
         android:textColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
@@ -64,7 +64,7 @@
                 android:id="@+id/coin_button"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/botao_lista_de_moedas"
+                android:contentDescription="@string/favorites_botao_lista_de_moedas"
                 android:orientation="vertical">
 
                 <ImageButton
@@ -81,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom|center"
-                    android:text="@string/button_coins"
+                    android:text="@string/favorites_button_coins"
                     android:textColor="#9c9c9c" />
             </LinearLayout>
 
@@ -89,7 +89,7 @@
                 android:id="@+id/favorite_button"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/botao_moedas_favoritas"
+                android:contentDescription="@string/favorites_botao_moedas_favoritas"
                 android:orientation="vertical">
 
                 <ImageButton
@@ -105,7 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom|center"
-                    android:text="@string/button_favorite"
+                    android:text="@string/favorites_button_favorite"
                     android:textColor="#9c9c9c" />
 
             </LinearLayout>
